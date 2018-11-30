@@ -60,6 +60,7 @@ namespace WindowsFormsApplication1
             frmFlappyBird_Load_2(sender, e);
             if (txtTu.Text != "" && txtDen.Text != "")
             {
+                
                 btnChoiLai.Visible = false;
                 char[] c1 = txtTu.Text.ToCharArray();
                 char[] c2 = txtDen.Text.ToCharArray();

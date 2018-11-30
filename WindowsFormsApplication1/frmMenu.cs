@@ -91,6 +91,12 @@ namespace WindowsFormsApplication1
             frm.ShowDialog();
         }
 
+        private void btnEggDrop_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            frmEggDrop frm = new frmEggDrop();
+            frm.ShowDialog();
+        }
     }
 
 }

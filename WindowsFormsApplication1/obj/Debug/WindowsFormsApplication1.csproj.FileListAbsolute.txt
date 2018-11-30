@@ -18,3 +18,4 @@ C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\Typing
 C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\Typing Game.application
 C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\Typing Game.exe
 C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\Typing Game.pdb
+C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmEggDrop.resources

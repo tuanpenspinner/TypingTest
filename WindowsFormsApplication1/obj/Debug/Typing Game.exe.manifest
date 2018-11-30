@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Typing Game.exe" size="3575808">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Typing Game.exe" size="4047360">
       <assemblyIdentity name="Typing Game" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VQjs9TgyKv5beruXrBvNY7YxcQ3w/b0poSBJ61k7u+A=</dsig:DigestValue>
+        <dsig:DigestValue>rTkYCSId1V/PGimfmq26f5ZL0BXY2UG/VxOyIP/BSKk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

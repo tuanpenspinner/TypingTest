@@ -39,7 +39,8 @@
             this.btnCharFallOut = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnScore = new System.Windows.Forms.Button();
+            this.btnEggDrop = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -175,7 +176,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.Games_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(513, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(712, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(413, 139);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -185,37 +186,53 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WindowsFormsApplication1.Properties.Resources.smile;
-            this.pictureBox2.Location = new System.Drawing.Point(632, 174);
+            this.pictureBox2.Location = new System.Drawing.Point(848, 156);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(277, 173);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
-            // button1
+            // btnScore
             // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.award;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Font = new System.Drawing.Font("Kristen ITC", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(186, 408);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(447, 127);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Thành tích bản thân";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnScore.AutoSize = true;
+            this.btnScore.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnScore.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.award;
+            this.btnScore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnScore.Font = new System.Drawing.Font("Kristen ITC", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScore.ForeColor = System.Drawing.Color.Black;
+            this.btnScore.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnScore.Location = new System.Drawing.Point(186, 408);
+            this.btnScore.Name = "btnScore";
+            this.btnScore.Size = new System.Drawing.Size(447, 127);
+            this.btnScore.TabIndex = 10;
+            this.btnScore.Text = "Thành tích bản thân";
+            this.btnScore.UseVisualStyleBackColor = false;
+            this.btnScore.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnEggDrop
+            // 
+            this.btnEggDrop.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEggDrop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEggDrop.Image = global::WindowsFormsApplication1.Properties.Resources.Egg1;
+            this.btnEggDrop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEggDrop.Location = new System.Drawing.Point(527, 269);
+            this.btnEggDrop.Name = "btnEggDrop";
+            this.btnEggDrop.Size = new System.Drawing.Size(145, 47);
+            this.btnEggDrop.TabIndex = 11;
+            this.btnEggDrop.Text = "EggDrop";
+            this.btnEggDrop.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEggDrop.UseVisualStyleBackColor = false;
+            this.btnEggDrop.Click += new System.EventHandler(this.btnEggDrop_Click);
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(921, 547);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1128, 547);
+            this.Controls.Add(this.btnEggDrop);
+            this.Controls.Add(this.btnScore);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCharFallOut);
@@ -250,6 +267,7 @@
         private System.Windows.Forms.Button btnCharFallOut;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnScore;
+        private System.Windows.Forms.Button btnEggDrop;
     }
 }

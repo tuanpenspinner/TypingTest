@@ -86,6 +86,12 @@
     <Compile Include="frmDangki.Designer.cs">
       <DependentUpon>frmDangki.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEggDrop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEggDrop.Designer.cs">
+      <DependentUpon>frmEggDrop.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFlappyBird.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </Compile>
     <EmbeddedResource Include="frmDangki.resx">
       <DependentUpon>frmDangki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEggDrop.resx">
+      <DependentUpon>frmEggDrop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFlappyBird.resx">
       <DependentUpon>frmFlappyBird.cs</DependentUpon>
@@ -239,12 +248,18 @@
     <None Include="Resources\FlappyBird1.png" />
     <None Include="Resources\BackGroundFlappyBird.jpg" />
     <None Include="Resources\award1.png" />
+    <None Include="Resources\Egg.png" />
+    <None Include="Resources\Basket.png" />
+    <None Include="Resources\Left.png" />
+    <None Include="Resources\Heart.png" />
+    <None Include="Resources\Egg.ico" />
     <Content Include="Resources\RememberPass.txt" />
     <None Include="Resources\Speed.png" />
     <None Include="Resources\Roundicons-100-Free-Solid-Alphabet-blocks.ico" />
     <None Include="Resources\Roundicons-100-Free-Solid-Alphabet-blocks1.ico" />
     <None Include="Resources\smile.png" />
     <None Include="Resources\Score.png" />
+    <None Include="Resources\Right.png" />
     <Content Include="Resources\Test.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

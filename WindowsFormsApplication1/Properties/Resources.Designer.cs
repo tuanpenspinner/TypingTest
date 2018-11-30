@@ -77,8 +77,6 @@ namespace WindowsFormsApplication1.Properties {
         ///
         ///TuanDepTrai-123
         ///
-        ///ThanhPhong-123
-        ///
         ///.
         /// </summary>
         internal static string Account {
@@ -140,6 +138,16 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Basket {
+            get {
+                object obj = ResourceManager.GetObject("Basket", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap circle_icon {
             get {
                 object obj = ResourceManager.GetObject("circle-icon", resourceCulture);
@@ -153,6 +161,26 @@ namespace WindowsFormsApplication1.Properties {
         internal static System.Drawing.Bitmap Custom_Icon_Design_Pretty_Office_9_Circle {
             get {
                 object obj = ResourceManager.GetObject("Custom-Icon-Design-Pretty-Office-9-Circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Egg {
+            get {
+                object obj = ResourceManager.GetObject("Egg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Egg1 {
+            get {
+                object obj = ResourceManager.GetObject("Egg1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -220,6 +248,16 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Heart {
+            get {
+                object obj = ResourceManager.GetObject("Heart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hopstarter_Soft_Scraps_Button_Close {
             get {
                 object obj = ResourceManager.GetObject("Hopstarter-Soft-Scraps-Button-Close", resourceCulture);
@@ -253,6 +291,16 @@ namespace WindowsFormsApplication1.Properties {
         internal static System.Drawing.Bitmap Kunai_icon {
             get {
                 object obj = ResourceManager.GetObject("Kunai-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Left {
+            get {
+                object obj = ResourceManager.GetObject("Left", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -338,11 +386,21 @@ namespace WindowsFormsApplication1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ThanhPhong-123.
+        ///   Looks up a localized string similar to Tuan1-123.
         /// </summary>
         internal static string RememberPass {
             get {
                 return ResourceManager.GetString("RememberPass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Right {
+            get {
+                object obj = ResourceManager.GetObject("Right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
