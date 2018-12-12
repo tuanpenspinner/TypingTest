@@ -16,12 +16,12 @@ namespace WindowsFormsApplication1
         int i = 1;
         int max;
         Random rd = new Random();
-
+        Database Db=new Database();
         public frmCharFallOut()
         {
             InitializeComponent();
         }
-
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Interval = 1;
@@ -77,8 +77,15 @@ namespace WindowsFormsApplication1
 
         private void frmTextFallOut_Load(object sender, EventArgs e)
         {
+            Db.Connection();
+            string UseName;
+            UseName=Db.GetAcountUsing(Db.Connec);
+
+            int max = Db.MaxScorePointCharFallOut(Db.Connec, UseName);
+            lblMaxPoint.Text=max+"";
             lblChar.Text = "";
             btnChoiLai.Visible = false;
+
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

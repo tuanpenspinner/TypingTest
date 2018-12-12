@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.OleDb;
 
 namespace WindowsFormsApplication1
 {
     public partial class frmDangki : Form
     {
+        Database Db = new Database();
         public frmDangki()
         {
             InitializeComponent();
@@ -20,66 +22,75 @@ namespace WindowsFormsApplication1
 
         private void btnDangki_Click(object sender, EventArgs e)
         {
-            List<Account> Accounts = new List<Account>();
-            StreamReader read = new StreamReader("Account.txt");
+            Db.Connection();
+            bool KT=true ;
+            if (txtPassword.Text == "")
+            {
+                lblPassWordNull.Visible = true;
+                KT = false;
+            }
+            else
+            {
+                lblPassWordNull.Visible = false;
+              
+            }
+
+            if (txtUsename.Text == "")
+            {
+                lblUseNameNull.Visible = true;
+                KT = false;
+            }
+            else
+            {
+                lblUseNameNull.Visible = false;
            
-            String s;
-
-            while ((s = read.ReadLine()) != null)
-            {
-                string[] line = s.Split('-');
-               
-                if (s != "")
-                {
-                    Account account = new Account();
-                    account.UseName = line[0];
-                    account.PassWord = line[1];
-                    Accounts.Add(account);
-                }
-                
             }
-            bool kt = true;
 
-            for (int i = 0; i < Accounts.Count; i++)
+            if (txtPassword.Text != txtPasswordagaint.Text)
             {
-                if (txtUsename.Text == Accounts[i].UseName)
-                {
-                    MessageBox.Show("Tên đăng nhập đã tồn tại,nhập tên khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    kt = false;
-                    txtUsename.Focus();
-                    read.Close();
-                    return;
-                }
+                lblPassWordCompare.Visible = true;
+                KT = false;
             }
-            read.Close();
- 
-            if (kt)
+            else
             {
-                if (txtPassword.Text != txtPasswordagaint.Text)
-                {
-                    MessageBox.Show("Pass word không khớp vui lòng nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtPassword.Focus();
-                    kt = false;
-                    read.Close();
-                    return;
-                }
+                lblPassWordCompare.Visible = false;
+             
             }
-            StreamWriter write = new StreamWriter("Account.txt", true);
 
-            write.WriteLine(txtUsename.Text+'-'+txtPassword.Text+'\n');
-            MessageBox.Show("Đăng kí thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            txtUsename.Text = "";
-            txtPassword.Text= "";
-            txtPasswordagaint.Text = "";
-            txtUsename.Focus();
-
-            write.Close();
+            if (KT)
+            {
+           
+                string SQL1 = "INSERT INTO TbDataAccount VALUES('" + txtUsename.Text + "' ,'" + txtPassword.Text + "')";
+                string SQL2 = "SELECT *FROM TbDataAccount WHERE UseName='" + txtUsename.Text + "'";
+                OleDbCommand Cmd1 = new OleDbCommand(SQL2, Db.Connec);
+                OleDbDataReader ReadDb = Cmd1.ExecuteReader();
+                if(ReadDb.Read())
+                {
+                    lblUseNameInvalid.Visible = true;
+                }
+                else
+                {
+                    OleDbCommand Cmd2= new OleDbCommand(SQL1, Db.Connec);
+                    Cmd2.ExecuteNonQuery();
+                    MessageBox.Show("Đăng kí thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    lblUseNameInvalid.Visible = false;
+                }  
+                Db.Connec.Close();
+            }
 
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void frmDangki_Load(object sender, EventArgs e)
+        {
+            lblPassWordNull.Visible = false;
+            lblUseNameNull.Visible = false;
+            lblPassWordCompare.Visible = false;
+            lblUseNameInvalid.Visible = false;
         }
     }
 }

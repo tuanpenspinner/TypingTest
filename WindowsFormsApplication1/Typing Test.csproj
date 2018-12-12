@@ -78,8 +78,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
-    <Compile Include="DanhSachAccount.cs" />
+    <Compile Include="Database.cs" />
     <Compile Include="frmDangki.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,7 +181,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="WindowsFormsApplication1_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -218,7 +216,7 @@
     <None Include="bin\Debug\Test.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Account.txt" />
+    <None Include="Resources\warnning.png" />
     <None Include="Resources\win.png" />
     <None Include="Resources\Thành Tích.png" />
     <None Include="Resources\Thac_Nước_Naruto.png" />
@@ -253,14 +251,15 @@
     <None Include="Resources\Left.png" />
     <None Include="Resources\Heart.png" />
     <None Include="Resources\Egg.ico" />
-    <Content Include="Resources\RememberPass.txt" />
     <None Include="Resources\Speed.png" />
     <None Include="Resources\Roundicons-100-Free-Solid-Alphabet-blocks.ico" />
     <None Include="Resources\Roundicons-100-Free-Solid-Alphabet-blocks1.ico" />
     <None Include="Resources\smile.png" />
     <None Include="Resources\Score.png" />
     <None Include="Resources\Right.png" />
-    <Content Include="Resources\Test.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Register.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

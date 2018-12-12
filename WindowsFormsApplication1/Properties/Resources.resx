@@ -145,14 +145,14 @@
   <data name="FlappyBird" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FlappyBird.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Egg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Egg.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Hopstarter-Soft-Scraps-Button-Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hopstarter-Soft-Scraps-Button-Close.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="smile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\smile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="RememberPass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\RememberPass.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="Play agian" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Play agian.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -162,9 +162,6 @@
   </data>
   <data name="alphabet-blocks-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alphabet-blocks-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Account" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Account.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,8 +178,8 @@
   <data name="Thac_Nước_Naruto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thac_Nước_Naruto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Test" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Test.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="alphabet-blocks-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alphabet-blocks-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icons-Land-Vista-People-Office-Customer-Male-Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons-Land-Vista-People-Office-Customer-Male-Light.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,9 +226,6 @@
   <data name="Thác nước" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thác nước.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="alphabet-blocks-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alphabet-blocks-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Usename" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Usename.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -240,6 +234,9 @@
   </data>
   <data name="Femfoyou-Angry-Birds-Angry-bird" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Femfoyou-Angry-Birds-Angry-bird.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warnning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warnning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Heart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Heart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,7 +250,7 @@
   <data name="Score" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Score.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Egg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Egg.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Register" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Register.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -61,31 +61,6 @@ namespace WindowsFormsApplication1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tuan1-123
-        ///
-        ///Tuan2-123
-        ///
-        ///Tuan-123
-        ///
-        ///TuanPenspiner-123
-        ///
-        ///TuanPenspiner1-123
-        ///
-        ///TuanPenspine2-123
-        ///
-        ///TuanPenspine3-123
-        ///
-        ///TuanDepTrai-123
-        ///
-        ///.
-        /// </summary>
-        internal static string Account {
-            get {
-                return ResourceManager.GetString("Account", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap alphabet_blocks_icon {
@@ -378,19 +353,20 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap register_button_1 {
+        internal static System.Drawing.Bitmap Register {
             get {
-                object obj = ResourceManager.GetObject("register-button-1", resourceCulture);
+                object obj = ResourceManager.GetObject("Register", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tuan1-123.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static string RememberPass {
+        internal static System.Drawing.Bitmap register_button_1 {
             get {
-                return ResourceManager.GetString("RememberPass", resourceCulture);
+                object obj = ResourceManager.GetObject("register-button-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -455,23 +431,6 @@ namespace WindowsFormsApplication1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gió âm thầm lướt qua muôn đời vì ai vì anh vì giờ anh biết chuyện tình mình chẳng còn gì,khi đó xuân sang người đừng ngọt lời thầm thì
-        ///Em bước sang ngang đợi chờ điều gì diệu kì
-        ///Như lúc ban đầu 
-        ///Và giờ anh khóc thì cũng chẳng để làm gì
-        ///Đâu phải cho anh,chuyện tình mình mà là vì
-        ///Em đã trao ai dòng lệ tràn đầy cầu kì những năm tháng phai màu
-        ///Nếu đóa hoa trồng trước kia chưa về,nhánh hương tình thắm thêm câu thề
-        ///Anh ước rằng,rằng một mai anh đến anh đón em vào sớm mai trong lành
-        ///Nhưng đó mãi là giấc mơ [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Test {
-            get {
-                return ResourceManager.GetString("Test", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Thác_nước {
@@ -517,6 +476,16 @@ namespace WindowsFormsApplication1.Properties {
         internal static System.Drawing.Bitmap Usename {
             get {
                 object obj = ResourceManager.GetObject("Usename", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap warnning {
+            get {
+                object obj = ResourceManager.GetObject("warnning", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

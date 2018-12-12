@@ -14,14 +14,15 @@ namespace WindowsFormsApplication1
         [STAThread]
         static void Main()
         {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmMenu());
             //Application.Run(new frmSpeedTestABC());
             //Application.Run(new frmFappybird());
             //Application.Run(new frmTypingTest());
-            //Application.Run(new frmCharFallOut());
-            Application.Run(new frmLogin());
+            Application.Run(new frmCharFallOut());
+            //Application.Run(new frmLogin());
 
             //frmLogin frm = new frmLogin();
             //if (frm.ShowDialog()==DialogResult.OK)

@@ -40,6 +40,8 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblMaxPoint = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,7 +124,7 @@
             this.lblDiem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblDiem.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiem.ForeColor = System.Drawing.Color.Maroon;
-            this.lblDiem.Location = new System.Drawing.Point(769, 68);
+            this.lblDiem.Location = new System.Drawing.Point(804, 68);
             this.lblDiem.Name = "lblDiem";
             this.lblDiem.Size = new System.Drawing.Size(58, 51);
             this.lblDiem.TabIndex = 5;
@@ -156,12 +158,38 @@
             this.textBox1.Size = new System.Drawing.Size(127, 49);
             this.textBox1.TabIndex = 7;
             // 
+            // lblMaxPoint
+            // 
+            this.lblMaxPoint.AutoSize = true;
+            this.lblMaxPoint.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblMaxPoint.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaxPoint.ForeColor = System.Drawing.Color.Black;
+            this.lblMaxPoint.Location = new System.Drawing.Point(802, 9);
+            this.lblMaxPoint.Name = "lblMaxPoint";
+            this.lblMaxPoint.Size = new System.Drawing.Size(51, 43);
+            this.lblMaxPoint.TabIndex = 9;
+            this.lblMaxPoint.Text = "00";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(654, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(160, 43);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "MaxScore:";
+            // 
             // frmCharFallOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(874, 464);
+            this.Controls.Add(this.lblMaxPoint);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.lblDiem);
@@ -194,5 +222,7 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblMaxPoint;
+        private System.Windows.Forms.Label label3;
     }
 }

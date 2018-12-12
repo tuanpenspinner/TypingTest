@@ -1,21 +1,20 @@
 C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\bin\Debug\Typing Game.exe.config
-C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\bin\Debug\Typing Game.exe.manifest
+C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\bin\Debug\Typing Game.application
+C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\bin\Debug\Typing Game.exe
+C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\bin\Debug\Typing Game.pdb
 C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmDangki.resources
+C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmEggDrop.resources
 C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmFlappyBird.resources
 C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmLogin.resources
 C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmMenu.resources
 C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmScore.resources
 C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmSpeedTestABC.resources
 C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmTypingTest.resources
-C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmCharFallOut.resources
-C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
-C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\bin\Debug\Typing Game.exe.manifest
-C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\bin\Debug\Typing Game.application
-C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\bin\Debug\Typing Game.exe
-C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\bin\Debug\Typing Game.pdb
 C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmCharFallOut.resources
+C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\Typing Test.csproj.GenerateResource.Cache
 C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\Typing Game.exe.manifest
 C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\Typing Game.application
 C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\Typing Game.exe
 C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\Typing Game.pdb
-C:\Users\Thanh Tuan\Desktop\TypingTest\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmEggDrop.resources

@@ -42,44 +42,17 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Typing Game.exe" size="4047360">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Typing Game.exe" size="4105728">
       <assemblyIdentity name="Typing Game" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rTkYCSId1V/PGimfmq26f5ZL0BXY2UG/VxOyIP/BSKk=</dsig:DigestValue>
+        <dsig:DigestValue>wI1BBEjNP1ihhFk0TKP76BceuHY9DHZfD4iy45aUhmE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Resources\Account.txt" size="142">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>LWGe1thSXvBgAYQztXM8HPk2k0mlgvsg+SKQnI0lkLo=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\RememberPass.txt" size="9">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>AwkIsDmDOpE72ezX5y8seqgnvLTZMCNukgMMFMc4Wcg=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\Test.txt" size="696">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>KHXNZCnt5dspZ4S9Dd9BDqA/gbopKv+DNydnQ23lBvA=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="Typing Game.exe.config" size="189">
     <hash>
       <dsig:Transforms>

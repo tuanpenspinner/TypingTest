@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.OleDb;
 
 namespace WindowsFormsApplication1
 {
     public partial class frmTypingTest : Form
     {
+        Database Db = new Database();
         public frmTypingTest()
         {
             InitializeComponent();
@@ -24,15 +26,18 @@ namespace WindowsFormsApplication1
 
         private void frmTypingTest_Load(object sender, EventArgs e)
         {
+            Db.Connection();
             btnChoiLai.Visible = false;
             txtTyping.Enabled = false;
-            StreamReader read = new StreamReader("Test.txt");
-            txtTest.Text= read.ReadToEnd();
-            read.Close();
-
+            string SQL="SELECT * FROM TbTypingTest WHERE NameSong='Thằng điên'";
+            OleDbCommand cmd = new OleDbCommand(SQL, Db.Connec);
+            OleDbDataReader dr = cmd.ExecuteReader();
+            while(dr.Read())
+            {
+                txtTest.Text = dr["Lyrics"].ToString();
+            }
+   
         }
-
-
         int second = 60;
         int dem = 0;
         int length = 0;
@@ -57,7 +62,7 @@ namespace WindowsFormsApplication1
                  TimerStart.Stop();
                 btnChoiLai.Visible = true;
                 
-                string[] Test = txtTest.Text.Split(' ');
+                string[] Test = txtTest.Text.Trim().Split(' ');
                 string[] Typing = txtTyping.Text.Split(' ');
                 string s = txtTyping.Text;
                 foreach (char c in s) if (c == ' ') length++;

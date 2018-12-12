@@ -8,87 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.OleDb;
 
 namespace WindowsFormsApplication1
 {
     public partial class frmLogin : Form
     {
+        Database Db = new Database();
         public frmLogin()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-            StreamReader read = new StreamReader("RememberPass.txt");
-            string ID = read.ReadLine();
-            if (ID != null)
-            {
-                string[] id = ID.Split('-');
-                txtPassword.Text = id[1];
-                txtUsename.Text = id[0];
-                read.Close();
-                chkRememberPass.Checked = true;
-            }
-            read.Close();
-        }
-
-        private void btlDangNhap_Click(object sender, EventArgs e)
-        {
-           
-            List<Account> Accounts = new List<Account>();
-            StreamReader read = new StreamReader("Account.txt");
-            String s; 
-
-   
-            while ((s = read.ReadLine()) != null)
-            {
-                string[] line = s.Split('-');
-                if(s!="")
-                {
-                    Account account = new Account();
-                    account.UseName = line[0];
-                    account.PassWord = line[1];
-                    Accounts.Add(account);
-                }
- 
-            }
-            bool Pass = false;
-            for(int i=0;i<Accounts.Count;i++)
-            {
-                if(txtUsename.Text==Accounts[i].UseName &&
-                    txtPassword.Text== Accounts[i].PassWord
-                    )
-                {
-                   
-                    Pass = true;
-                }
-                
-            } 
-       
-            if(Pass)
-            {
-
-                if(chkRememberPass.Checked)
-                {
-                    StreamWriter write = new StreamWriter("RememberPass.txt");
-                    write.Write(txtUsename.Text + "-" + txtPassword.Text);
-                    write.Close();
-                }
-                else
-                {
-                    StreamWriter write = new StreamWriter("RememberPass.txt");
-                    write.Write("");
-                    write.Close();
-                }
-                this.Visible=false;
-                frmMenu frm = new frmMenu();
-                frm.ShowDialog();
-
-            }
-            else MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác","Lỗi đăng nhập",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            read.Close();
         }
 
         private void btnDangKi_Click(object sender, EventArgs e)
@@ -96,10 +25,78 @@ namespace WindowsFormsApplication1
             frmDangki frm = new frmDangki();
             frm.ShowDialog();
         }
+      
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.Text =="") lblPassWordNull.Visible = true;
+            else lblPassWordNull.Visible = false;
 
-        private void button2_Click(object sender, EventArgs e)
+            if (txtUsename.Text == "") lblUseNameNull.Visible = true;
+            else lblUseNameNull.Visible = false;
+
+          
+            Db.Connection();
+            
+            string SQL = "SELECT UseName,PassWord FROM TbDataAccount WHERE UseName='" + txtUsename.Text + "' AND '" + txtPassword.Text + "'";
+            string SQLRemmemberPassWord = "INSERT INTO TbRemmemberPassWord VALUES('" + txtUsename.Text + "' ,'" + txtPassword.Text + "')";
+            string SQLUser = "INSERT INTO TbUser VALUES('" + txtUsename.Text + "' ,'" + txtPassword.Text + "')";
+            string SQLREMOVEALL = "DELETE FROM TbRemmemberPassWord";
+            string SQLREMOVEALLUser = "DELETE FROM TbUser";
+            OleDbCommand Cmd = new OleDbCommand(SQL, Db.Connec);
+            OleDbCommand Cmd1 = new OleDbCommand(SQLRemmemberPassWord, Db.Connec);
+            OleDbCommand Cmd2 = new OleDbCommand(SQLREMOVEALL, Db.Connec);
+            OleDbDataReader ReadDb = Cmd.ExecuteReader();
+            if(ReadDb.Read())
+            {
+                Cmd2.ExecuteNonQuery();
+                if (chkRememberPass.Checked)
+                {
+                    Cmd1.ExecuteNonQuery();
+
+                }
+                Cmd1 = new OleDbCommand(SQLUser, Db.Connec);
+                Cmd2 = new OleDbCommand(SQLREMOVEALLUser, Db.Connec);
+                Cmd1.ExecuteNonQuery();
+                Cmd2.ExecuteNonQuery();
+
+                Db.Connec.Close();
+                lblFaillLogin.Visible = false;
+                frmMenu frm = new frmMenu();
+                frm.ShowDialog();
+                this.Dispose();
+            }
+            else
+            {
+                lblFaillLogin.Visible = true;
+            }
+
+           
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            Db.Connection();
+            string KT = "SELECT *FROM TbRemmemberPassWord";
+            OleDbCommand cmd = new OleDbCommand(KT,Db.Connec);
+            OleDbDataReader ReadDb = cmd.ExecuteReader();
+            if(ReadDb.Read())
+            {
+                chkRememberPass.Checked = true;
+                txtUsename.Text = (ReadDb["UseName"].ToString());
+                txtPassword.Text = (ReadDb["PassWord"].ToString());
+            }
+            lblPassWordNull.Visible = false;
+            lblUseNameNull.Visible = false;
+            lblFaillLogin.Visible = false;
+            Db.Connec.Close();
+
+        }
+
+   
     }
 }

@@ -53,7 +53,7 @@ namespace WindowsFormsApplication1
         {
             btnCharFallOut.Visible = false;
             btnFlappyBird.Visible = false;
-
+            btnEggDrop.Visible = false;
             btnTestABC.Visible = false;
             btnTextPractice.Visible = false;
         }
@@ -63,6 +63,7 @@ namespace WindowsFormsApplication1
             btnTestABC.Visible = true;
             btnTextPractice.Visible = true;
 
+            btnEggDrop.Visible = false;
             btnCharFallOut.Visible = false;
             btnFlappyBird.Visible = false;
 
@@ -73,6 +74,7 @@ namespace WindowsFormsApplication1
             btnTestABC.Visible = false;
             btnTextPractice.Visible = false;
 
+            btnEggDrop.Visible = true;
             btnCharFallOut.Visible = true;
             btnFlappyBird.Visible = true;
         }

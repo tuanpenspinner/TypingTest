@@ -7,14 +7,14 @@
     <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Typing Game.exe.manifest" size="4673">
+    <dependentAssembly dependencyType="install" codebase="Typing Game.exe.manifest" size="3479">
       <assemblyIdentity name="Typing Game.exe" version="1.0.0.10" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3LV3E2pQxUVrr71j/u+2D4tqOguBUl1QDUAvkI+rlow=</dsig:DigestValue>
+        <dsig:DigestValue>aw6EiEpQ9mUdlnrfgvI3UoK/Oorx6PsxkNME8mryuwM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
