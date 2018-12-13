@@ -52,6 +52,8 @@
             this.btnBatDau = new System.Windows.Forms.Button();
             this.lblMaxPoint = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblUseName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblBird
@@ -291,6 +293,28 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "MaxScore:";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(0, 239);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 29);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "UseName:";
+            // 
+            // lblUseName
+            // 
+            this.lblUseName.AutoSize = true;
+            this.lblUseName.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUseName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblUseName.Location = new System.Drawing.Point(123, 239);
+            this.lblUseName.Name = "lblUseName";
+            this.lblUseName.Size = new System.Drawing.Size(216, 29);
+            this.lblUseName.TabIndex = 23;
+            this.lblUseName.Text = "TuanPenSpinner";
+            // 
             // frmFlappyBird
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,6 +322,8 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.BackGroundFlappyBird;
             this.ClientSize = new System.Drawing.Size(902, 466);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblUseName);
             this.Controls.Add(this.lblMaxPoint);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnThoat);
@@ -356,5 +382,7 @@
         private System.Windows.Forms.Button btnBatDau;
         private System.Windows.Forms.Label lblMaxPoint;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblUseName;
     }
 }

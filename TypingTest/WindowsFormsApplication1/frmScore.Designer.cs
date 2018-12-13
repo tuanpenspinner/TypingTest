@@ -41,11 +41,11 @@
             this.lblUseName = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblMaxPointTestPractice = new System.Windows.Forms.Label();
-            this.lblFlappyBird = new System.Windows.Forms.Label();
+            this.lblMaxPointFlappyBird = new System.Windows.Forms.Label();
             this.lblMaxPointCharFallOut = new System.Windows.Forms.Label();
             this.lblMaxPointTestABC = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.lblEggDrop = new System.Windows.Forms.Label();
+            this.lblMaxPointEggDrop = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -116,9 +116,9 @@
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(44, 166);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 34);
+            this.label1.Size = new System.Drawing.Size(143, 34);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Tên người chơi:";
+            this.label1.Text = "UseName:";
             // 
             // label2
             // 
@@ -197,16 +197,16 @@
             this.lblMaxPointTestPractice.TabIndex = 25;
             this.lblMaxPointTestPractice.Text = "00";
             // 
-            // lblFlappyBird
+            // lblMaxPointFlappyBird
             // 
-            this.lblFlappyBird.AutoSize = true;
-            this.lblFlappyBird.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFlappyBird.ForeColor = System.Drawing.Color.Purple;
-            this.lblFlappyBird.Location = new System.Drawing.Point(273, 401);
-            this.lblFlappyBird.Name = "lblFlappyBird";
-            this.lblFlappyBird.Size = new System.Drawing.Size(39, 29);
-            this.lblFlappyBird.TabIndex = 26;
-            this.lblFlappyBird.Text = "00";
+            this.lblMaxPointFlappyBird.AutoSize = true;
+            this.lblMaxPointFlappyBird.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaxPointFlappyBird.ForeColor = System.Drawing.Color.Purple;
+            this.lblMaxPointFlappyBird.Location = new System.Drawing.Point(273, 401);
+            this.lblMaxPointFlappyBird.Name = "lblMaxPointFlappyBird";
+            this.lblMaxPointFlappyBird.Size = new System.Drawing.Size(39, 29);
+            this.lblMaxPointFlappyBird.TabIndex = 26;
+            this.lblMaxPointFlappyBird.Text = "00";
             // 
             // lblMaxPointCharFallOut
             // 
@@ -241,26 +241,26 @@
             this.label12.TabIndex = 22;
             this.label12.Text = "EggDrop:";
             // 
-            // lblEggDrop
+            // lblMaxPointEggDrop
             // 
-            this.lblEggDrop.AutoSize = true;
-            this.lblEggDrop.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEggDrop.ForeColor = System.Drawing.Color.Purple;
-            this.lblEggDrop.Location = new System.Drawing.Point(273, 451);
-            this.lblEggDrop.Name = "lblEggDrop";
-            this.lblEggDrop.Size = new System.Drawing.Size(39, 29);
-            this.lblEggDrop.TabIndex = 26;
-            this.lblEggDrop.Text = "00";
+            this.lblMaxPointEggDrop.AutoSize = true;
+            this.lblMaxPointEggDrop.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaxPointEggDrop.ForeColor = System.Drawing.Color.Purple;
+            this.lblMaxPointEggDrop.Location = new System.Drawing.Point(273, 451);
+            this.lblMaxPointEggDrop.Name = "lblMaxPointEggDrop";
+            this.lblMaxPointEggDrop.Size = new System.Drawing.Size(39, 29);
+            this.lblMaxPointEggDrop.TabIndex = 26;
+            this.lblMaxPointEggDrop.Text = "00";
             // 
             // frmScore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 532);
+            this.ClientSize = new System.Drawing.Size(884, 535);
             this.Controls.Add(this.lblMaxPointTestABC);
             this.Controls.Add(this.lblMaxPointCharFallOut);
-            this.Controls.Add(this.lblEggDrop);
-            this.Controls.Add(this.lblFlappyBird);
+            this.Controls.Add(this.lblMaxPointEggDrop);
+            this.Controls.Add(this.lblMaxPointFlappyBird);
             this.Controls.Add(this.lblMaxPointTestPractice);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblUseName);
@@ -302,10 +302,10 @@
         private System.Windows.Forms.Label lblUseName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblMaxPointTestPractice;
-        private System.Windows.Forms.Label lblFlappyBird;
+        private System.Windows.Forms.Label lblMaxPointFlappyBird;
         private System.Windows.Forms.Label lblMaxPointCharFallOut;
         private System.Windows.Forms.Label lblMaxPointTestABC;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label lblEggDrop;
+        private System.Windows.Forms.Label lblMaxPointEggDrop;
     }
 }

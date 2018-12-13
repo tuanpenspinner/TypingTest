@@ -36,10 +36,12 @@
             this.btnChoiLai = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.lblSecond = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblMinute = new System.Windows.Forms.Label();
             this.txtTyping = new System.Windows.Forms.TextBox();
             this.TimerStart = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblUseName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +53,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(285, 401);
+            this.panel1.Size = new System.Drawing.Size(285, 434);
             this.panel1.TabIndex = 0;
             // 
             // txtTest
@@ -63,15 +65,17 @@
             this.txtTest.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtTest.Enabled = false;
             this.txtTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTest.Location = new System.Drawing.Point(0, 3);
+            this.txtTest.Location = new System.Drawing.Point(12, 6);
             this.txtTest.Multiline = true;
             this.txtTest.Name = "txtTest";
             this.txtTest.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.txtTest.Size = new System.Drawing.Size(285, 395);
+            this.txtTest.Size = new System.Drawing.Size(447, 428);
             this.txtTest.TabIndex = 0;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblUseName);
             this.panel2.Controls.Add(this.btnThoat);
             this.panel2.Controls.Add(this.btnChoiLai);
             this.panel2.Controls.Add(this.btnStart);
@@ -81,9 +85,9 @@
             this.panel2.Controls.Add(this.txtTyping);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(310, 0);
+            this.panel2.Location = new System.Drawing.Point(467, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(494, 401);
+            this.panel2.Size = new System.Drawing.Size(558, 434);
             this.panel2.TabIndex = 1;
             // 
             // btnThoat
@@ -93,7 +97,7 @@
             this.btnThoat.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Image = global::WindowsFormsApplication1.Properties.Resources.Hopstarter_Soft_Scraps_Button_Close;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(310, 352);
+            this.btnThoat.Location = new System.Drawing.Point(406, 372);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(140, 49);
             this.btnThoat.TabIndex = 7;
@@ -107,7 +111,7 @@
             this.btnChoiLai.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnChoiLai.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnChoiLai.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChoiLai.Location = new System.Drawing.Point(323, 12);
+            this.btnChoiLai.Location = new System.Drawing.Point(387, 10);
             this.btnChoiLai.Name = "btnChoiLai";
             this.btnChoiLai.Size = new System.Drawing.Size(159, 71);
             this.btnChoiLai.TabIndex = 4;
@@ -137,11 +141,22 @@
             this.lblSecond.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblSecond.Font = new System.Drawing.Font("MV Boli", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSecond.ForeColor = System.Drawing.Color.Red;
-            this.lblSecond.Location = new System.Drawing.Point(260, 21);
+            this.lblSecond.Location = new System.Drawing.Point(287, 19);
             this.lblSecond.Name = "lblSecond";
             this.lblSecond.Size = new System.Drawing.Size(70, 46);
             this.lblSecond.TabIndex = 2;
             this.lblSecond.Text = "00";
+            // 
+            // label2
+            // 
+            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label2.Font = new System.Drawing.Font("MV Boli", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Cyan;
+            this.label2.Location = new System.Drawing.Point(263, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 45);
+            this.label2.TabIndex = 2;
+            this.label2.Text = ":";
             // 
             // lblMinute
             // 
@@ -149,7 +164,7 @@
             this.lblMinute.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblMinute.Font = new System.Drawing.Font("MV Boli", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinute.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblMinute.Location = new System.Drawing.Point(171, 21);
+            this.lblMinute.Location = new System.Drawing.Point(198, 19);
             this.lblMinute.Name = "lblMinute";
             this.lblMinute.Size = new System.Drawing.Size(59, 46);
             this.lblMinute.TabIndex = 2;
@@ -164,7 +179,7 @@
             this.txtTyping.Location = new System.Drawing.Point(0, 87);
             this.txtTyping.Multiline = true;
             this.txtTyping.Name = "txtTyping";
-            this.txtTyping.Size = new System.Drawing.Size(491, 247);
+            this.txtTyping.Size = new System.Drawing.Size(534, 247);
             this.txtTyping.TabIndex = 0;
             // 
             // TimerStart
@@ -172,22 +187,33 @@
             this.TimerStart.Interval = 1000;
             this.TimerStart.Tick += new System.EventHandler(this.TimerStart_Tick);
             // 
-            // label2
+            // label1
             // 
-            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label2.Font = new System.Drawing.Font("MV Boli", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Cyan;
-            this.label2.Location = new System.Drawing.Point(236, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 45);
-            this.label2.TabIndex = 2;
-            this.label2.Text = ":";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(5, 396);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 29);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "UseName:";
+            // 
+            // lblUseName
+            // 
+            this.lblUseName.AutoSize = true;
+            this.lblUseName.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUseName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblUseName.Location = new System.Drawing.Point(141, 396);
+            this.lblUseName.Name = "lblUseName";
+            this.lblUseName.Size = new System.Drawing.Size(216, 29);
+            this.lblUseName.TabIndex = 23;
+            this.lblUseName.Text = "TuanPenSpinner";
             // 
             // frmTypingTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 401);
+            this.ClientSize = new System.Drawing.Size(1025, 434);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
@@ -216,5 +242,7 @@
         private System.Windows.Forms.Button btnChoiLai;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUseName;
     }
 }

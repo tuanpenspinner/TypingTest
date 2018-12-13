@@ -23,6 +23,11 @@ namespace WindowsFormsApplication1
         int xCot1, xCot2, xCot3;
         int yCotTren1, yCotTren2, yCotTren3;
         int yCotDuoi1, yCotDuoi2, yCotDuoi3;
+        int KhoangCach2Thanh;
+        int KhoangCach2Cot;
+        int yBird = 200;
+        int xBird = 400;
+        int Point = 0;
         private void frmFlappyBird_KeyPress(object sender, KeyPressEventArgs e)
         {
 
@@ -47,12 +52,7 @@ namespace WindowsFormsApplication1
             yBird++;
             lblBird.Location = new Point(400, yBird);
         }
-        int KhoangCach2Thanh;
-        int KhoangCach2Cot;
-        int yBird = 200;
-        int xBird = 400;
-        int Point = 0;
-
+    
         private void btnChoiLai_Click(object sender, EventArgs e)
         {
             frmFlappyBird_Load(sender, e);
@@ -86,23 +86,14 @@ namespace WindowsFormsApplication1
             Random rd1 = new Random();
             int a = 0;
             int b = 0;
-            try
-            {
-                char[] c1 = txtTu.Text.ToCharArray();
-                char[] c2 = txtDen.Text.ToCharArray();
-                a = Convert.ToInt32(c1[0]);
-                b = Convert.ToInt32(c2[0]);
+            char[] c1 = txtTu.Text.ToCharArray();
+            char[] c2 = txtDen.Text.ToCharArray();
+            a = Convert.ToInt32(c1[0]);
+            b = Convert.ToInt32(c2[0]);
 
-            }
-
-            catch
+            if (txtTu.Text == "" || txtDen.Text == ""||txtDen.Text.Length>=2||txtTu.Text.Length>=2||a>b)
             {
-                MessageBox.Show("Lỗi nhập kí tự");
-            }
-
-            if (txtTu.Text == "" || txtDen.Text == "")
-            {
-                MessageBox.Show("Bạn chưa nhập đủ từ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi nhập từ khi chơi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 lblBird.Focus();
             }
 
@@ -126,7 +117,6 @@ namespace WindowsFormsApplication1
             frm.ShowDialog();
         }
 
-
         private void frmFlappyBird_Load(object sender, EventArgs e)
         {
             Db.Connection();
@@ -148,6 +138,10 @@ namespace WindowsFormsApplication1
 
         private void frmFlappyBird_Load_1(object sender, EventArgs e)
         {
+            Database Db = new Database();
+            Db.Connection();
+            lblUseName.Text = Db.GetAcountUsing(Db.Connec);
+
             frmFlappyBird_Load(sender, e);
             yBird = 200;
             xBird = 400;

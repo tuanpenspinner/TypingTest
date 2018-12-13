@@ -34,7 +34,6 @@ namespace WindowsFormsApplication1
             if (txtUsename.Text == "") lblUseNameNull.Visible = true;
             else lblUseNameNull.Visible = false;
 
-          
             Db.Connection();
             
             string SQL = "SELECT UseName,PassWord FROM TbDataAccount WHERE UseName='" + txtUsename.Text + "' AND '" + txtPassword.Text + "'";
@@ -54,16 +53,21 @@ namespace WindowsFormsApplication1
                     Cmd1.ExecuteNonQuery();
 
                 }
-                Cmd1 = new OleDbCommand(SQLUser, Db.Connec);
                 Cmd2 = new OleDbCommand(SQLREMOVEALLUser, Db.Connec);
-                Cmd1.ExecuteNonQuery();
                 Cmd2.ExecuteNonQuery();
+             
+                Cmd1 = new OleDbCommand(SQLUser, Db.Connec);
+                Cmd1.ExecuteNonQuery();
+               
 
                 Db.Connec.Close();
                 lblFaillLogin.Visible = false;
+
+                this.Hide();
                 frmMenu frm = new frmMenu();
                 frm.ShowDialog();
-                this.Dispose();
+                
+
             }
             else
             {
