@@ -15,13 +15,17 @@ namespace WindowsFormsApplication1
         int dem = 0;
         int i = 1;
         int max;
+        int maxPoint;
+        string UseName;
         Random rd = new Random();
-        Database Db=new Database();
+        Database Db = new Database();
+
+
         public frmCharFallOut()
         {
             InitializeComponent();
         }
-        
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Interval = 1;
@@ -32,7 +36,16 @@ namespace WindowsFormsApplication1
                 lblChar.Top = 0;
                 Random rd = new Random();
                 lblChar.Text = Convert.ToString((char)rd.Next(65, 122));
-                lblDiem.Text = "" + dem;
+                if (dem >= 10)
+                {
+                    lblDiem.Text = "" + dem;
+                }
+
+                else
+                {
+                    lblDiem.Text = "0" + dem;
+                }
+
                 if (dem % 10 == 0) i++;
                 textBox1.Text = "";
             }
@@ -40,14 +53,28 @@ namespace WindowsFormsApplication1
             if (lblChar.Top >= max)
             {
                 timer1.Stop();
-                MessageBox.Show("Game over", "Kết thúc", MessageBoxButtons.OK);
-                textBox1.Text = "";
-                lblChar.Visible = false;
-                btnChoi.Visible = false;
-                btnChoiLai.Visible = true;
-                btnChoiLai.Focus();
+                GameOver();
+
             }
             lblChar.Top += i;
+        }
+
+        private void GameOver()
+        {
+            MessageBox.Show("Bạn đạt được số điểm là: " + dem, "Kết thúc", MessageBoxButtons.OK);
+            Db.Connection();
+            maxPoint = Db.MaxScoreCharFallOut(Db.Connec, UseName);
+            if (dem > maxPoint)
+            {
+                Db.SaveMaxCharFallOut(Db.Connec, UseName, dem);
+            }
+            textBox1.Text = "";
+            lblChar.Visible = false;
+            btnChoi.Visible = false;
+            btnChoiLai.Visible = true;
+            btnChoiLai.Focus();
+
+            Db.Connec.Close();
         }
 
         private void btnChoi_Click(object sender, EventArgs e)
@@ -63,9 +90,10 @@ namespace WindowsFormsApplication1
 
         private void btnChoiLai_Click(object sender, EventArgs e)
         {
+            frmTextFallOut_Load1(sender, e);
             btnChoiLai.Visible = false;
             textBox1.Focus();
-          
+
             lblChar.Text = Convert.ToString((char)rd.Next(65, 122));
             lblChar.Visible = true;
             lblChar.Top = 0;
@@ -75,17 +103,33 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void frmTextFallOut_Load(object sender, EventArgs e)
+        private void frmTextFallOut_Load1(object sender, EventArgs e)
         {
             Db.Connection();
-            string UseName;
-            UseName=Db.GetAcountUsing(Db.Connec);
 
-            int max = Db.MaxScorePointCharFallOut(Db.Connec, UseName);
-            lblMaxPoint.Text=max+"";
+            UseName = Db.GetAcountUsing(Db.Connec);
+
+            maxPoint = Db.MaxScoreCharFallOut(Db.Connec, UseName);
+            if (maxPoint >= 10)
+            {
+                lblMaxPoint.Text = maxPoint + "";
+            }
+            else
+            {
+                lblMaxPoint.Text = "0" + maxPoint;
+            }
+
+            Db.Connec.Close();
+        }
+
+        private void frmTextFallOut_Load(object sender, EventArgs e)
+        {
+            Database Db = new Database();
+            Db.Connection();
+            lblUseName.Text = Db.GetAcountUsing(Db.Connec);
+            frmTextFallOut_Load1(sender, e);
             lblChar.Text = "";
             btnChoiLai.Visible = false;
-
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -95,9 +139,14 @@ namespace WindowsFormsApplication1
             frm.ShowDialog();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void frmCharFallOut_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (MessageBox.Show("Bạn có chắc chắn muốn thoát không ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == DialogResult.Cancel)
 
+            {
+                e.Cancel=true;
+            }
         }
+
     }
 }

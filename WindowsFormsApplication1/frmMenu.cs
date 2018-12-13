@@ -12,6 +12,7 @@ namespace WindowsFormsApplication1
 {
     public partial class frmMenu : Form
     {
+        
         public frmMenu()
         {
             InitializeComponent();
@@ -51,6 +52,9 @@ namespace WindowsFormsApplication1
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
+            Database Db = new Database();
+            Db.Connection();
+            lblUseName.Text = Db.GetAcountUsing(Db.Connec);
             btnCharFallOut.Visible = false;
             btnFlappyBird.Visible = false;
             btnEggDrop.Visible = false;
@@ -83,7 +87,7 @@ namespace WindowsFormsApplication1
         {
             this.Dispose();
             frmLogin frm = new frmLogin();
-            frm.ShowDialog();
+            frm.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

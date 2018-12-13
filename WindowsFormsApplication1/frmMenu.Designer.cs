@@ -41,6 +41,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnScore = new System.Windows.Forms.Button();
             this.btnEggDrop = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblUseName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -97,7 +99,7 @@
             this.btnDangXuat.ForeColor = System.Drawing.Color.Navy;
             this.btnDangXuat.Image = global::WindowsFormsApplication1.Properties.Resources.Hopstarter_Soft_Scraps_Button_Close;
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(686, 461);
+            this.btnDangXuat.Location = new System.Drawing.Point(912, 481);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(204, 54);
             this.btnDangXuat.TabIndex = 3;
@@ -202,7 +204,7 @@
             this.btnScore.Font = new System.Drawing.Font("Kristen ITC", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnScore.ForeColor = System.Drawing.Color.Black;
             this.btnScore.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnScore.Location = new System.Drawing.Point(186, 408);
+            this.btnScore.Location = new System.Drawing.Point(25, 388);
             this.btnScore.Name = "btnScore";
             this.btnScore.Size = new System.Drawing.Size(447, 127);
             this.btnScore.TabIndex = 10;
@@ -225,12 +227,36 @@
             this.btnEggDrop.UseVisualStyleBackColor = false;
             this.btnEggDrop.Click += new System.EventHandler(this.btnEggDrop_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(698, 404);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(163, 36);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "UseName:";
+            // 
+            // lblUseName
+            // 
+            this.lblUseName.AutoSize = true;
+            this.lblUseName.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUseName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblUseName.Location = new System.Drawing.Point(859, 404);
+            this.lblUseName.Name = "lblUseName";
+            this.lblUseName.Size = new System.Drawing.Size(271, 36);
+            this.lblUseName.TabIndex = 13;
+            this.lblUseName.Text = "TuanPenSpinner";
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(1128, 547);
+            this.Controls.Add(this.lblUseName);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnEggDrop);
             this.Controls.Add(this.btnScore);
             this.Controls.Add(this.pictureBox2);
@@ -269,5 +295,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnScore;
         private System.Windows.Forms.Button btnEggDrop;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblUseName;
     }
 }

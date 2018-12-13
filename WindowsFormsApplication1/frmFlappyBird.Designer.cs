@@ -46,11 +46,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.lblPoint = new System.Windows.Forms.Label();
             this.btnChoiLai = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnBatDau = new System.Windows.Forms.Button();
+            this.lblMaxPoint = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblUseName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblBird
@@ -59,7 +62,7 @@
             this.lblBird.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBird.ForeColor = System.Drawing.Color.Red;
             this.lblBird.Image = global::WindowsFormsApplication1.Properties.Resources.FlappyBird1;
-            this.lblBird.Location = new System.Drawing.Point(184, 187);
+            this.lblBird.Location = new System.Drawing.Point(366, 188);
             this.lblBird.Name = "lblBird";
             this.lblBird.Size = new System.Drawing.Size(83, 70);
             this.lblBird.TabIndex = 0;
@@ -143,6 +146,7 @@
             // 
             this.txtTu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtTu.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTu.ForeColor = System.Drawing.Color.Lime;
             this.txtTu.Location = new System.Drawing.Point(89, 8);
             this.txtTu.Name = "txtTu";
             this.txtTu.Size = new System.Drawing.Size(41, 40);
@@ -153,6 +157,7 @@
             // 
             this.txtDen.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtDen.Location = new System.Drawing.Point(209, 10);
             this.txtDen.Name = "txtDen";
             this.txtDen.Size = new System.Drawing.Size(43, 40);
@@ -175,6 +180,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Lime;
             this.label3.Location = new System.Drawing.Point(83, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 31);
@@ -186,6 +192,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label4.Location = new System.Drawing.Point(188, 62);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 31);
@@ -197,28 +204,20 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(7, 114);
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(42, 172);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 45);
+            this.label5.Size = new System.Drawing.Size(105, 45);
             this.label5.TabIndex = 12;
-            this.label5.Text = "Điểm:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(53, 314);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(12, 16);
-            this.label6.TabIndex = 13;
-            this.label6.Text = ":";
+            this.label5.Text = "Score:";
             // 
             // lblPoint
             // 
             this.lblPoint.AutoSize = true;
             this.lblPoint.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblPoint.Font = new System.Drawing.Font("Monotype Corsiva", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPoint.Location = new System.Drawing.Point(127, 114);
+            this.lblPoint.ForeColor = System.Drawing.Color.Red;
+            this.lblPoint.Location = new System.Drawing.Point(163, 172);
             this.lblPoint.Name = "lblPoint";
             this.lblPoint.Size = new System.Drawing.Size(54, 45);
             this.lblPoint.TabIndex = 14;
@@ -230,7 +229,7 @@
             this.btnChoiLai.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChoiLai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnChoiLai.Image = global::WindowsFormsApplication1.Properties.Resources.Play_agian;
-            this.btnChoiLai.Location = new System.Drawing.Point(8, 298);
+            this.btnChoiLai.Location = new System.Drawing.Point(4, 393);
             this.btnChoiLai.Name = "btnChoiLai";
             this.btnChoiLai.Size = new System.Drawing.Size(150, 75);
             this.btnChoiLai.TabIndex = 15;
@@ -247,9 +246,9 @@
             this.btnThoat.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Image = global::WindowsFormsApplication1.Properties.Resources.Hopstarter_Soft_Scraps_Button_Close;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(15, 407);
+            this.btnThoat.Location = new System.Drawing.Point(733, 407);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(143, 46);
+            this.btnThoat.Size = new System.Drawing.Size(154, 46);
             this.btnThoat.TabIndex = 16;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -262,13 +261,59 @@
             this.btnBatDau.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBatDau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnBatDau.Image = global::WindowsFormsApplication1.Properties.Resources.Play;
-            this.btnBatDau.Location = new System.Drawing.Point(17, 187);
+            this.btnBatDau.Location = new System.Drawing.Point(17, 298);
             this.btnBatDau.Name = "btnBatDau";
             this.btnBatDau.Size = new System.Drawing.Size(104, 83);
             this.btnBatDau.TabIndex = 5;
             this.btnBatDau.Text = "Chơi";
             this.btnBatDau.UseVisualStyleBackColor = false;
-            this.btnBatDau.Click += new System.EventHandler(this.button1_Click);
+            this.btnBatDau.Click += new System.EventHandler(this.btnBatDau_Click);
+            // 
+            // lblMaxPoint
+            // 
+            this.lblMaxPoint.AutoSize = true;
+            this.lblMaxPoint.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblMaxPoint.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaxPoint.ForeColor = System.Drawing.Color.Black;
+            this.lblMaxPoint.Location = new System.Drawing.Point(163, 107);
+            this.lblMaxPoint.Name = "lblMaxPoint";
+            this.lblMaxPoint.Size = new System.Drawing.Size(51, 43);
+            this.lblMaxPoint.TabIndex = 18;
+            this.lblMaxPoint.Text = "00";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(-4, 107);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(160, 43);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "MaxScore:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(0, 239);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 29);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "UseName:";
+            // 
+            // lblUseName
+            // 
+            this.lblUseName.AutoSize = true;
+            this.lblUseName.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUseName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblUseName.Location = new System.Drawing.Point(123, 239);
+            this.lblUseName.Name = "lblUseName";
+            this.lblUseName.Size = new System.Drawing.Size(216, 29);
+            this.lblUseName.TabIndex = 23;
+            this.lblUseName.Text = "TuanPenSpinner";
             // 
             // frmFlappyBird
             // 
@@ -276,11 +321,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.BackGroundFlappyBird;
-            this.ClientSize = new System.Drawing.Size(884, 465);
+            this.ClientSize = new System.Drawing.Size(902, 466);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblUseName);
+            this.Controls.Add(this.lblMaxPoint);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnChoiLai);
             this.Controls.Add(this.lblPoint);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -328,10 +376,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblPoint;
         private System.Windows.Forms.Button btnChoiLai;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnBatDau;
+        private System.Windows.Forms.Label lblMaxPoint;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblUseName;
     }
 }

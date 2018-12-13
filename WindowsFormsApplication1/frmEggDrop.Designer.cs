@@ -49,6 +49,10 @@
             this.btnChoiLai = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.lblMaxPoint = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblUseName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picEgg3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEgg1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEgg2)).BeginInit();
@@ -168,18 +172,18 @@
             this.lblDiem.AutoSize = true;
             this.lblDiem.Font = new System.Drawing.Font("Modern No. 20", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblDiem.Location = new System.Drawing.Point(932, 214);
+            this.lblDiem.Location = new System.Drawing.Point(894, 212);
             this.lblDiem.Name = "lblDiem";
-            this.lblDiem.Size = new System.Drawing.Size(110, 38);
+            this.lblDiem.Size = new System.Drawing.Size(112, 38);
             this.lblDiem.TabIndex = 6;
-            this.lblDiem.Text = "Điểm:";
+            this.lblDiem.Text = "Score:";
             // 
             // lblScore
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.ForeColor = System.Drawing.Color.DeepPink;
-            this.lblScore.Location = new System.Drawing.Point(1033, 212);
+            this.lblScore.Location = new System.Drawing.Point(1049, 212);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(51, 43);
             this.lblScore.TabIndex = 7;
@@ -216,7 +220,7 @@
             // picHeart3
             // 
             this.picHeart3.Image = global::WindowsFormsApplication1.Properties.Resources.Heart;
-            this.picHeart3.Location = new System.Drawing.Point(1000, 61);
+            this.picHeart3.Location = new System.Drawing.Point(990, 110);
             this.picHeart3.Name = "picHeart3";
             this.picHeart3.Size = new System.Drawing.Size(32, 32);
             this.picHeart3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -226,7 +230,7 @@
             // picHeart2
             // 
             this.picHeart2.Image = global::WindowsFormsApplication1.Properties.Resources.Heart;
-            this.picHeart2.Location = new System.Drawing.Point(1038, 61);
+            this.picHeart2.Location = new System.Drawing.Point(1028, 110);
             this.picHeart2.Name = "picHeart2";
             this.picHeart2.Size = new System.Drawing.Size(32, 32);
             this.picHeart2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -236,7 +240,7 @@
             // picHeart1
             // 
             this.picHeart1.Image = global::WindowsFormsApplication1.Properties.Resources.Heart;
-            this.picHeart1.Location = new System.Drawing.Point(1076, 61);
+            this.picHeart1.Location = new System.Drawing.Point(1066, 110);
             this.picHeart1.Name = "picHeart1";
             this.picHeart1.Size = new System.Drawing.Size(32, 32);
             this.picHeart1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -269,17 +273,67 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(906, 54);
+            this.label1.Location = new System.Drawing.Point(883, 103);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 39);
             this.label1.TabIndex = 17;
             this.label1.Text = "Heart";
             // 
+            // lblMaxPoint
+            // 
+            this.lblMaxPoint.AutoSize = true;
+            this.lblMaxPoint.BackColor = System.Drawing.SystemColors.Control;
+            this.lblMaxPoint.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaxPoint.ForeColor = System.Drawing.Color.Black;
+            this.lblMaxPoint.Location = new System.Drawing.Point(1049, 157);
+            this.lblMaxPoint.Name = "lblMaxPoint";
+            this.lblMaxPoint.Size = new System.Drawing.Size(51, 43);
+            this.lblMaxPoint.TabIndex = 20;
+            this.lblMaxPoint.Text = "00";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.Control;
+            this.label7.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(882, 157);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(160, 43);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "MaxScore:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(876, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 29);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "UseName:";
+            // 
+            // lblUseName
+            // 
+            this.lblUseName.AutoSize = true;
+            this.lblUseName.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUseName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblUseName.Location = new System.Drawing.Point(999, 38);
+            this.lblUseName.Name = "lblUseName";
+            this.lblUseName.Size = new System.Drawing.Size(216, 29);
+            this.lblUseName.TabIndex = 21;
+            this.lblUseName.Text = "TuanPenSpinner";
+            // 
             // frmEggDrop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1120, 581);
+            this.ClientSize = new System.Drawing.Size(1162, 581);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblUseName);
+            this.Controls.Add(this.lblMaxPoint);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnChoiLai);
             this.Controls.Add(this.picHeart1);
@@ -334,5 +388,9 @@
         private System.Windows.Forms.PictureBox picEgg5;
         private System.Windows.Forms.PictureBox picEgg4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMaxPoint;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblUseName;
     }
 }

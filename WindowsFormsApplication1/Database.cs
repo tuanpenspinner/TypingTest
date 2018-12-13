@@ -22,7 +22,8 @@ namespace WindowsFormsApplication1
             }
 
         }
-         public string GetAcountUsing(OleDbConnection Connec)
+
+        public string GetAcountUsing(OleDbConnection Connec)
         {
             string UseName="";
             string sql = "SELECT UseName FROM TbUser";
@@ -36,12 +37,12 @@ namespace WindowsFormsApplication1
             return UseName;
         }
 
-        public int MaxScorePointCharFallOut(OleDbConnection Connec,string UseName)
+        public int MaxScoreCharFallOut(OleDbConnection Connec,string UseName)
         {
             string maxscore="";
             int max = 0;
 
-            string sql = "SELECT *FROM TbDataAccount WHERE UseName=Tuan1";
+            string sql = "SELECT* FROM TbDataAccount WHERE UseName='"+UseName+"'";
 
             OleDbCommand cmd = new OleDbCommand(sql, Connec);
             OleDbDataReader dr = cmd.ExecuteReader();
@@ -52,6 +53,62 @@ namespace WindowsFormsApplication1
             }
             return max;
         }
-    }
 
+        public void SaveMaxCharFallOut(OleDbConnection Connec, string UseName,int PointMax)
+        {
+            //string sql = "SELECT* FROM TbDataAccount WHERE UseName='" + UseName + "'";
+            string sql = "UPDATE TbDataAccount SET PointCharFallOut= '" + PointMax + "' WHERE UseName='" + UseName + "'";
+            OleDbCommand cmd = new OleDbCommand(sql, Connec);
+            cmd.ExecuteNonQuery();
+        }
+
+        public int MaxScoreFlappyBird(OleDbConnection Connec, string UseName)
+        {
+            string maxscore = "";
+            int max = 0;
+
+            string sql = "SELECT* FROM TbDataAccount WHERE UseName='" + UseName + "'";
+
+            OleDbCommand cmd = new OleDbCommand(sql, Connec);
+            OleDbDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                maxscore = dr["PointFlappyBird"].ToString();
+                max = Convert.ToInt32(maxscore);
+            }
+            return max;
+        }
+
+        public void SaveMaxFlappyBird(OleDbConnection Connec, string UseName, int PointMax)
+        {
+            string sql = "UPDATE TbDataAccount SET PointFlappyBird= '" + PointMax + "' WHERE UseName='" + UseName + "'";
+            OleDbCommand cmd = new OleDbCommand(sql, Connec);
+            cmd.ExecuteNonQuery();
+        }
+
+        public int MaxScoreEggDrop(OleDbConnection Connec, string UseName)
+        {
+            string maxscore = "";
+            int max = 0;
+
+            string sql = "SELECT* FROM TbDataAccount WHERE UseName='" + UseName + "'";
+
+            OleDbCommand cmd = new OleDbCommand(sql, Connec);
+            OleDbDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                maxscore = dr["PointEggDrop"].ToString();
+                max = Convert.ToInt32(maxscore);
+            }
+            return max;
+        }
+
+        public void SaveMaxEggDrop(OleDbConnection Connec, string UseName, int PointMax)
+        {
+            string sql = "UPDATE TbDataAccount SET PointEggDrop= '" + PointMax + "' WHERE UseName='" + UseName + "'";
+            OleDbCommand cmd = new OleDbCommand(sql, Connec);
+            cmd.ExecuteNonQuery();
+        }
+    }
 }
+

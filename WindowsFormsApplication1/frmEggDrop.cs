@@ -12,6 +12,11 @@ namespace WindowsFormsApplication1
 {
     public partial class frmEggDrop : Form
     {
+
+        Database Db = new Database();
+        int maxPoint = 0;
+        string UseName;
+
         public frmEggDrop()
         {
             InitializeComponent();
@@ -23,10 +28,11 @@ namespace WindowsFormsApplication1
         int yBasket = 429;
         int Score = 0;
         int Heart = 3;
+        int Egg1;
 
         private void btnChoiLai_Click(object sender, EventArgs e)
         {
-          
+            frmEggDrop_Load2(sender, e);
             frmEggDrop_Load1(sender, e);
             btnBatDau.Visible = false;
             Egg1 = SelectEggRandom(Egg1);
@@ -76,6 +82,11 @@ namespace WindowsFormsApplication1
 
         private void frmEggDrop_Load(object sender, EventArgs e)
         {
+            Database Db = new Database();
+            Db.Connection();
+            lblUseName.Text = Db.GetAcountUsing(Db.Connec);
+
+            frmEggDrop_Load2(sender, e);
             Score = 0;
             Heart = 3;
             xBasket = 359;
@@ -109,11 +120,30 @@ namespace WindowsFormsApplication1
                 lblRight.Text = Convert.ToString((char)rd.Next(98, 122));
             }
         }
+
         private void frmEggDrop_Load1(object sender, EventArgs e)
         {
             this.KeyPreview = true;
         }
-        int Egg1;
+
+        private void frmEggDrop_Load2(object sender, EventArgs e)
+        {
+            Db.Connection();
+            UseName = Db.GetAcountUsing(Db.Connec);
+
+            maxPoint = Db.MaxScoreEggDrop(Db.Connec, UseName);
+            if (maxPoint >= 10)
+            {
+                lblMaxPoint.Text = maxPoint + "";
+            }
+            else
+            {
+                lblMaxPoint.Text = "0" + maxPoint;
+            }
+
+            Db.Connec.Close();
+        }
+
         private void btnBatDau_Click(object sender, EventArgs e)
         {
             frmEggDrop_Load1(sender, e);
@@ -127,10 +157,18 @@ namespace WindowsFormsApplication1
             Egg = rd.Next(1, 6);
             return Egg;
         }
+
         private void GameOver()
         {
             MessageBox.Show("Bạn được số điểm là " + Score + " điểm","Game Over", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            if (Score > maxPoint)
+            {
+                Db.Connection();
+                Db.SaveMaxEggDrop(Db.Connec, UseName, Score);
+                Score = 0;
+            }
         }
+
         private void timer_Tick(object sender, EventArgs e)
         {
             timer.Interval = 1;

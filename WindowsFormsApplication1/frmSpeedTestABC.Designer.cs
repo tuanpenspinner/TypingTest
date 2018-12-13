@@ -63,6 +63,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnChoiLai = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
+            this.lblUseName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -453,19 +455,43 @@
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThoat.Location = new System.Drawing.Point(780, 467);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(118, 68);
+            this.btnThoat.Size = new System.Drawing.Size(136, 68);
             this.btnThoat.TabIndex = 7;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label27.Location = new System.Drawing.Point(722, 9);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(130, 29);
+            this.label27.TabIndex = 24;
+            this.label27.Text = "UseName:";
+            // 
+            // lblUseName
+            // 
+            this.lblUseName.AutoSize = true;
+            this.lblUseName.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUseName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblUseName.Location = new System.Drawing.Point(845, 9);
+            this.lblUseName.Name = "lblUseName";
+            this.lblUseName.Size = new System.Drawing.Size(216, 29);
+            this.lblUseName.TabIndex = 23;
+            this.lblUseName.Text = "TuanPenSpinner";
+            // 
             // frmSpeedTestABC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(972, 560);
+            this.ClientSize = new System.Drawing.Size(1049, 560);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.lblUseName);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnChoiLai);
             this.Controls.Add(this.btnChoi);
@@ -546,5 +572,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnChoiLai;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label lblUseName;
     }
 }

@@ -12,6 +12,9 @@ namespace WindowsFormsApplication1
 {
     public partial class frmFlappyBird : Form
     {
+        Database Db = new Database();
+        int maxPoint=0;
+        string UseName;
         public frmFlappyBird()
         {
             InitializeComponent();
@@ -20,6 +23,11 @@ namespace WindowsFormsApplication1
         int xCot1, xCot2, xCot3;
         int yCotTren1, yCotTren2, yCotTren3;
         int yCotDuoi1, yCotDuoi2, yCotDuoi3;
+        int KhoangCach2Thanh;
+        int KhoangCach2Cot;
+        int yBird = 200;
+        int xBird = 400;
+        int Point = 0;
         private void frmFlappyBird_KeyPress(object sender, KeyPressEventArgs e)
         {
 
@@ -27,14 +35,14 @@ namespace WindowsFormsApplication1
             if (e.KeyChar == c[0])
             {
                 yBird -= 30;
-                lblBird.Location = new Point(206, yBird);
+                lblBird.Location = new Point(400, yBird);
                 char[] c1 = txtTu.Text.ToCharArray();
                 char[] c2 = txtDen.Text.ToCharArray();
                 Random rd = new Random();
                 int a = Convert.ToInt32(c1[0]);
                 int b = Convert.ToInt32(c2[0]);
 
-                lblBird.Text = Convert.ToString((char)rd.Next(a, b));
+                lblBird.Text = Convert.ToString((char)rd.Next(a, b+1));
             }
         }
 
@@ -42,32 +50,23 @@ namespace WindowsFormsApplication1
         {
             timer1.Interval = 10;
             yBird++;
-            lblBird.Location = new Point(206, yBird);
+            lblBird.Location = new Point(400, yBird);
         }
-        int KhoangCach2Thanh;
-        int KhoangCach2Cot;
-        int yBird = 200;
-        int xBird = 200;
-        int Point = 0;
-
-        private void lblBird_Click(object sender, EventArgs e)
-        {
-
-        }
-
+    
         private void btnChoiLai_Click(object sender, EventArgs e)
         {
+            frmFlappyBird_Load(sender, e);
             frmFlappyBird_Load_2(sender, e);
             if (txtTu.Text != "" && txtDen.Text != "")
             {
-                
+
                 btnChoiLai.Visible = false;
                 char[] c1 = txtTu.Text.ToCharArray();
                 char[] c2 = txtDen.Text.ToCharArray();
                 Random rd1 = new Random();
                 int a = Convert.ToInt32(c1[0]);
                 int b = Convert.ToInt32(c2[0]);
-                lblBird.Text = Convert.ToString((char)rd1.Next(a, b));
+                lblBird.Text = Convert.ToString((char)rd1.Next(a, b+1));
                 lblBird.Focus();
                 timer1.Start();
                 timer.Start();
@@ -80,6 +79,37 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void btnBatDau_Click(object sender, EventArgs e)
+        {
+            frmFlappyBird_Load_2(sender, e);
+            frmFlappyBird_Load(sender, e);
+            Random rd1 = new Random();
+            int a = 0;
+            int b = 0;
+            char[] c1 = txtTu.Text.ToCharArray();
+            char[] c2 = txtDen.Text.ToCharArray();
+            a = Convert.ToInt32(c1[0]);
+            b = Convert.ToInt32(c2[0]);
+
+            if (txtTu.Text == "" || txtDen.Text == ""||txtDen.Text.Length>=2||txtTu.Text.Length>=2||a>b)
+            {
+                MessageBox.Show("Lỗi nhập từ khi chơi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblBird.Focus();
+            }
+
+            else
+            {
+                btnBatDau.Visible = false;
+                btnChoiLai.Visible = false;
+                btnBatDau.Enabled = false;
+
+                lblBird.Text = Convert.ToString((char)rd1.Next(a, b + 1));
+                lblBird.Focus();
+                timer1.Start();
+                timer.Start();
+            }
+        }
+
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -87,13 +117,34 @@ namespace WindowsFormsApplication1
             frm.ShowDialog();
         }
 
+        private void frmFlappyBird_Load(object sender, EventArgs e)
+        {
+            Db.Connection();
 
+            UseName = Db.GetAcountUsing(Db.Connec);
+
+            maxPoint = Db.MaxScoreFlappyBird(Db.Connec, UseName);
+            if (maxPoint >= 10)
+            {
+                lblMaxPoint.Text = maxPoint + "";
+            }
+            else
+            {
+                lblMaxPoint.Text = "0" + maxPoint;
+            }
+
+            Db.Connec.Close();
+        }
 
         private void frmFlappyBird_Load_1(object sender, EventArgs e)
         {
-            yBird = 183;
-            xBird = 200;
-            Point = 0;
+            Database Db = new Database();
+            Db.Connection();
+            lblUseName.Text = Db.GetAcountUsing(Db.Connec);
+
+            frmFlappyBird_Load(sender, e);
+            yBird = 200;
+            xBird = 400;
 
             this.KeyPreview = false;
             char[] c1 = txtTu.Text.ToCharArray();
@@ -132,36 +183,18 @@ namespace WindowsFormsApplication1
         private void frmFlappyBird_Load_2(object sender, EventArgs e)
         {
             this.KeyPreview = true;
-               
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmFlappyBird_Load_2(sender, e);
-            if (txtTu.Text != "" && txtDen.Text != "")
-            {
-                btnBatDau.Visible = false;
-                btnChoiLai.Visible = false;
-                btnBatDau.Enabled = false;
 
-                char[] c1 = txtTu.Text.ToCharArray();
-                char[] c2 = txtDen.Text.ToCharArray();
-                Random rd1 = new Random();
-                int a = Convert.ToInt32(c1[0]);
-                int b = Convert.ToInt32(c2[0]);
-                lblBird.Text = Convert.ToString((char)rd1.Next(a, b));
-                lblBird.Focus();
-                timer1.Start();
-                timer.Start();
-            }
-            else
-            {
-                MessageBox.Show("Bạn chưa nhập đủ từ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                lblBird.Focus();
-            }
         }
+  
         private void GameOver()
         {
             MessageBox.Show("Bạn được số điểm là " + lblPoint.Text + " điểm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            if (Point > maxPoint)
+            {
+                Db.Connection();
+                Db.SaveMaxFlappyBird(Db.Connec, UseName, Point);
+                Point = 0;
+            }
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -264,7 +297,18 @@ namespace WindowsFormsApplication1
                 }
             }
 
-            if(xBird==xCot1||xBird==xCot2||xBird==xCot3)
+
+            if (yBird <=0)
+            {
+                timer1.Stop();
+                timer.Stop();
+                GameOver();
+                frmFlappyBird_Load_1(sender, e);
+                btnChoiLai.Visible = true;
+                lblPoint.Text = "00";
+            }
+
+            if (xBird==xCot1||xBird==xCot2||xBird==xCot3)
             {
               
                 Point++;
