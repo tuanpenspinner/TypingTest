@@ -14,11 +14,16 @@ namespace WindowsFormsApplication1
 {
     public partial class frmTypingTest : Form
     {
+        int second = 60;
+        int dem = 0;
+        int length = 0;
         Database Db = new Database();
+
         public frmTypingTest()
         {
             InitializeComponent();
         }
+
         public void closeForm()
         {
             this.Dispose();
@@ -38,9 +43,7 @@ namespace WindowsFormsApplication1
             }
    
         }
-        int second = 60;
-        int dem = 0;
-        int length = 0;
+        
         private void btnStart_Click(object sender, EventArgs e)
         {
             btnStart.Visible = false;
@@ -49,7 +52,6 @@ namespace WindowsFormsApplication1
             txtTyping.Focus();
             TimerStart.Start();
         }
-       
        
         private void TimerStart_Tick(object sender, EventArgs e)
         {

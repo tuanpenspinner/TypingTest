@@ -109,6 +109,30 @@ namespace WindowsFormsApplication1
             OleDbCommand cmd = new OleDbCommand(sql, Connec);
             cmd.ExecuteNonQuery();
         }
+
+        public int MaxScoreBlockDrop(OleDbConnection Connec, string UseName)
+        {
+            string maxscore = "";
+            int max = 0;
+
+            string sql = "SELECT* FROM TbDataAccount WHERE UseName='" + UseName + "'";
+
+            OleDbCommand cmd = new OleDbCommand(sql, Connec);
+            OleDbDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                maxscore = dr["PointBlockDrop"].ToString();
+                max = Convert.ToInt32(maxscore);
+            }
+            return max;
+        }
+
+        public void SaveMaxBlockDrop(OleDbConnection Connec, string UseName, int PointMax)
+        {
+            string sql = "UPDATE TbDataAccount SET PointBlockDrop= '" + PointMax + "' WHERE UseName='" + UseName + "'";
+            OleDbCommand cmd = new OleDbCommand(sql, Connec);
+            cmd.ExecuteNonQuery();
+        }
     }
 }
 

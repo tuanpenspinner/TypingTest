@@ -22,9 +22,10 @@ namespace WindowsFormsApplication1
             //Application.Run(new frmFlappyBird());
             //Application.Run(new frmTypingTest());
             //Application.Run(new frmCharFallOut());
-            Application.Run(new frmLogin());
+            //Application.Run(new frmLogin());
             //Application.Run(new frmScore());
             //Application.Run(new frmEggDrop());
+            Application.Run(new frmBlockDrop());
 
             //frmLogin frm = new frmLogin();
             //if (frm.ShowDialog()==DialogResult.OK)
