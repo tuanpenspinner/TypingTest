@@ -13,10 +13,6 @@ namespace WindowsFormsApplication1
 {
     public partial class frmBlockDrop : Form
     {
-        public frmBlockDrop()
-        {
-            InitializeComponent();
-        }
         Database Db = new Database();
         string UseName = "";
         int ylblMain = 75;
@@ -26,11 +22,17 @@ namespace WindowsFormsApplication1
         int MaxPoint;
         string[] str;
         Random rd = new Random();
+
+        public frmBlockDrop()
+        {
+            InitializeComponent();
+        }
+
         private void GetDataTbBlockDrop()
         {
             Db.Connection();
             string SQL = "SELECT * FROM TbBlockDrop";
-            string strs="";
+            string strs = "";
 
             OleDbCommand cmd = new OleDbCommand(SQL, Db.Connec);
             OleDbDataReader dr = cmd.ExecuteReader();
@@ -39,9 +41,8 @@ namespace WindowsFormsApplication1
                 strs = dr["Animal"].ToString();
             }
 
-            str=strs.Split(new char[] {'-'});
+            str = strs.Split(new char[] { '-' });
 
-            MessageBox.Show(str.Length + "");
         }
 
         private void SetTextLabelMain()
@@ -51,22 +52,22 @@ namespace WindowsFormsApplication1
 
         private void frmBlockDrop_Load(object sender, EventArgs e)
         {
+            this.KeyPreview = false;
             GetDataTbBlockDrop();
             SetTextLabelMain();
             Db.Connection();
             UseName = Db.GetAcountUsing(Db.Connec);
-            lblUseName.Text= UseName;
+            lblUseName.Text = UseName;
             MaxPoint = Db.MaxScoreBlockDrop(Db.Connec, UseName);
-            if (MaxPoint>=10)
+            if (MaxPoint >= 10)
             {
-                lblMaxPoint.Text = MaxPoint+"";
+                lblMaxPoint.Text = MaxPoint + "";
             }
 
             else
             {
-                lblMaxPoint.Text ="0"+ MaxPoint;
+                lblMaxPoint.Text = "0" + MaxPoint;
             }
-          
             lbl1.Visible = false;
             lbl2.Visible = false;
             lbl3.Visible = false;
@@ -107,15 +108,27 @@ namespace WindowsFormsApplication1
             btnChoiLai.Visible = true;
         }
 
+        private void frmBlockDrop_Load_KePreviewTrue(object sender, EventArgs e)
+        {
+            this.KeyPreview = true;
+        }
+
+        private void frmBlockDrop_Load_KePreviewFalse(object sender, EventArgs e)
+        {
+            this.KeyPreview = false;
+        }
+
         private void btnChoi_Click(object sender, EventArgs e)
         {
-            timer.Interval = 100;
+            frmBlockDrop_Load_KePreviewTrue(sender, e);
+            timer.Interval = 1000;
             timer.Start();
             lblMain.Visible = true;
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
+
             ylblMain += lblMain.Height;
 
             lblMain.Location = new Point(xlblMain, ylblMain);
@@ -147,7 +160,7 @@ namespace WindowsFormsApplication1
                             Dem++;
                             SetTextLabelMain();
                         }
-                       
+
                         break;
                     }
 
@@ -162,7 +175,7 @@ namespace WindowsFormsApplication1
                             Dem++;
                             SetTextLabelMain();
                         }
-                        
+
                         break;
                     }
 
@@ -177,7 +190,7 @@ namespace WindowsFormsApplication1
                             Dem++;
                             SetTextLabelMain();
                         }
-                       
+
                         break;
                     }
 
@@ -192,7 +205,7 @@ namespace WindowsFormsApplication1
                             Dem++;
                             SetTextLabelMain();
                         }
-                       
+
                         break;
                     }
 
@@ -207,7 +220,7 @@ namespace WindowsFormsApplication1
                             Dem++;
                             SetTextLabelMain();
                         }
-                       
+
                         break;
                     }
 
@@ -220,7 +233,7 @@ namespace WindowsFormsApplication1
                             lblMain.Visible = false;
                             ylblMain = 75;
                             timer.Stop();
-                            GameOver(sender,e);
+                            GameOver(sender, e);
                         }
                         break;
 
@@ -236,8 +249,9 @@ namespace WindowsFormsApplication1
 
         private void GameOver(object sender, EventArgs e)
         {
-            MessageBox.Show("Bạn nhận được số điểm là: " + lblDiem.Text, "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-   
+            frmBlockDrop_Load_KePreviewFalse(sender, e);
+            MessageBox.Show("Bạn nhận được số điểm là: " + lblPoint.Text, "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
             lblMain.Visible = false;
             btnChoi.Visible = false;
             btnChoiLai.Visible = true;
@@ -245,7 +259,7 @@ namespace WindowsFormsApplication1
             xlblMain = 444;
             lblMain.Location = new Point(444, 75);
 
-            if(Point>MaxPoint)
+            if (Point > MaxPoint)
             {
                 Db.SaveMaxBlockDrop(Db.Connec, UseName, Point);
             }
@@ -257,10 +271,162 @@ namespace WindowsFormsApplication1
 
         private void btnChoiLai_Click(object sender, EventArgs e)
         {
-
-            timer.Interval = 100;
+            SetTextLabelMain();
+            frmBlockDrop_Load_KePreviewTrue(sender, e);
             timer.Start();
             lblMain.Visible = true;
         }
+
+        private void frmBlockDrop_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char[] c = lblMain.Text.ToCharArray();
+            if (e.KeyChar == c[0])
+            {
+                string s = lblMain.Text;
+                s = s.Substring(1, s.Length - 1);
+                lblMain.Text = s;
+                if (lblMain.Text == "")
+                {
+                    lblMain.Text = "Press Space!";
+
+                }
+            }
+            else if (e.KeyChar == ' ' && lblMain.Text != "Press Space!")
+            {
+                switch (Dem)
+                {
+                    case 1:
+                        {
+
+                            lbl1.Visible = true;
+                            lbl1.Text = lblMain.Text;
+                            lblMain.Location = new Point(444, 75);
+                            ylblMain = 75;
+                            Dem++;
+                            SetTextLabelMain();
+                            break;
+                        }
+                    case 2:
+                        {
+
+
+                            {
+                                lbl2.Visible = true;
+                                lbl2.Text = lblMain.Text;
+                                lblMain.Location = new Point(444, 75);
+                                ylblMain = 75;
+                                Dem++;
+                                SetTextLabelMain();
+                            }
+
+                            break;
+                        }
+
+                    case 3:
+                        {
+
+                            {
+                                lbl3.Visible = true;
+                                lbl3.Text = lblMain.Text;
+                                lblMain.Location = new Point(444, 75);
+                                ylblMain = 75;
+                                Dem++;
+                                SetTextLabelMain();
+                            }
+
+                            break;
+                        }
+
+                    case 4:
+                        {
+
+                            {
+                                lbl4.Visible = true;
+                                lbl4.Text = lblMain.Text;
+                                lblMain.Location = new Point(444, 75);
+                                ylblMain = 75;
+                                Dem++;
+                                SetTextLabelMain();
+                            }
+
+                            break;
+                        }
+
+                    case 5:
+                        {
+
+                            {
+                                lbl5.Visible = true;
+                                lbl5.Text = lblMain.Text;
+                                lblMain.Location = new Point(444, 75);
+                                ylblMain = 75;
+                                Dem++;
+                                SetTextLabelMain();
+                            }
+
+                            break;
+                        }
+
+                    case 6:
+                        {
+
+                            {
+                                lbl6.Visible = true;
+                                lbl6.Text = lblMain.Text;
+                                lblMain.Location = new Point(444, 75);
+                                ylblMain = 75;
+                                Dem++;
+                                SetTextLabelMain();
+                            }
+
+                            break;
+                        }
+
+                    case 7:
+                        {
+
+                            {
+                                lbl7.Visible = true;
+                                lbl7.Text = lblMain.Text;
+                                lblMain.Visible = false;
+                                ylblMain = 75;
+                                timer.Stop();
+                                GameOver(sender, e);
+                            }
+                            break;
+
+                        }
+                }
+            }
+            else
+            {
+                if (e.KeyChar == ' ')
+                {
+                    Point++;
+                    lblMain.Location = new Point(444, 75);
+                    ylblMain = 75;
+                    if (Point >= 10)
+                    {
+                        lblPoint.Text = Point + "";
+                    }
+
+                    else
+                    {
+                        lblPoint.Text = "0" + Point;
+                    }
+                    SetTextLabelMain();
+                }
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            frmMenu frm = new frmMenu();
+            frm.ShowDialog();
+        }
     }
 }
+
+
+  

@@ -20,10 +20,15 @@ namespace WindowsFormsApplication1
 
         private void btnTestABC_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            frmSpeedTestABC frm = new frmSpeedTestABC();
-            frm.ShowDialog();
-         
+            if(cmbTestABC.Text!="")
+            { 
+                this.Dispose();
+                frmSpeedTestABC frm = new frmSpeedTestABC();
+                frm.strcmbTestABC = cmbTestABC.SelectedItem.ToString();
+                frm.ShowDialog();
+            }
+            btnTextPractice.Visible = false;
+            cmbTestABC.Visible = true;  
         }
 
         private void btnTextPractice_Click(object sender, EventArgs e)
@@ -60,13 +65,17 @@ namespace WindowsFormsApplication1
             btnEggDrop.Visible = false;
             btnTestABC.Visible = false;
             btnTextPractice.Visible = false;
+            btnBlockDrop.Visible = false;
+            cmbTestABC.Visible = false;
         }
 
         private void btnSpeedTest_Click(object sender, EventArgs e)
         {
+            cmbTestABC.Visible = false;
             btnTestABC.Visible = true;
             btnTextPractice.Visible = true;
 
+            btnBlockDrop.Visible = false;
             btnEggDrop.Visible = false;
             btnCharFallOut.Visible = false;
             btnFlappyBird.Visible = false;
@@ -75,9 +84,11 @@ namespace WindowsFormsApplication1
 
         private void btnTyPingGame_Click(object sender, EventArgs e)
         {
+            cmbTestABC.Visible = false;
             btnTestABC.Visible = false;
             btnTextPractice.Visible = false;
 
+            btnBlockDrop.Visible = true;
             btnEggDrop.Visible = true;
             btnCharFallOut.Visible = true;
             btnFlappyBird.Visible = true;
@@ -101,6 +112,13 @@ namespace WindowsFormsApplication1
         {
             this.Dispose();
             frmEggDrop frm = new frmEggDrop();
+            frm.ShowDialog();
+        }
+
+        private void btnBlockDrop_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            frmBlockDrop frm = new frmBlockDrop();
             frm.ShowDialog();
         }
     }

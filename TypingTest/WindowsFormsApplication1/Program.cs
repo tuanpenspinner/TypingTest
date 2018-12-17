@@ -6,12 +6,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
+
     static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+
         static void Main()
         {
 
@@ -25,7 +27,7 @@ namespace WindowsFormsApplication1
             //Application.Run(new frmLogin());
             //Application.Run(new frmScore());
             //Application.Run(new frmEggDrop());
-            Application.Run(new frmBlockDrop());
+            //Application.Run(new frmBlockDrop());
 
             //frmLogin frm = new frmLogin();
             //if (frm.ShowDialog()==DialogResult.OK)

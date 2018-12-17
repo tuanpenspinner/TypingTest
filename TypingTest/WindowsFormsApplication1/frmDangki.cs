@@ -59,8 +59,8 @@ namespace WindowsFormsApplication1
 
             if (KT)
             {
-           
-                string SQL1 = "INSERT INTO TbDataAccount VALUES('" + txtUsename.Text + "' ,'" + txtPassword.Text + "')";
+          
+                string SQL1 = "INSERT INTO TbDataAccount ([UseName],[PassWord]) VALUES('" + txtUsename.Text + "' ,'" + txtPassword.Text + "')";
                 string SQL2 = "SELECT *FROM TbDataAccount WHERE UseName='" + txtUsename.Text + "'";
                 OleDbCommand Cmd1 = new OleDbCommand(SQL2, Db.Connec);
                 OleDbDataReader ReadDb = Cmd1.ExecuteReader();
@@ -83,6 +83,8 @@ namespace WindowsFormsApplication1
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Dispose();
+            frmLogin frm = new frmLogin();
+            frm.Show();
         }
 
         private void frmDangki_Load(object sender, EventArgs e)

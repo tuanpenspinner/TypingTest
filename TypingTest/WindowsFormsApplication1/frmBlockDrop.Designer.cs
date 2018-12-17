@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBlockDrop));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lbl1 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
@@ -42,13 +43,12 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.lblMaxPoint = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.lblDiem = new System.Windows.Forms.Label();
+            this.lblPoint = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btnChoiLai = new System.Windows.Forms.Button();
             this.btnChoi = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.lblMain = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -187,6 +187,7 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // lblMaxPoint
             // 
@@ -212,16 +213,16 @@
             this.label9.TabIndex = 29;
             this.label9.Text = "MaxScore:";
             // 
-            // lblDiem
+            // lblPoint
             // 
-            this.lblDiem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblDiem.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiem.ForeColor = System.Drawing.Color.Maroon;
-            this.lblDiem.Location = new System.Drawing.Point(162, 188);
-            this.lblDiem.Name = "lblDiem";
-            this.lblDiem.Size = new System.Drawing.Size(58, 51);
-            this.lblDiem.TabIndex = 28;
-            this.lblDiem.Text = "00";
+            this.lblPoint.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblPoint.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPoint.ForeColor = System.Drawing.Color.Maroon;
+            this.lblPoint.Location = new System.Drawing.Point(160, 180);
+            this.lblPoint.Name = "lblPoint";
+            this.lblPoint.Size = new System.Drawing.Size(58, 51);
+            this.lblPoint.TabIndex = 28;
+            this.lblPoint.Text = "00";
             // 
             // label10
             // 
@@ -280,31 +281,17 @@
             this.lblMain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblMain.Visible = false;
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Brown;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Lime;
-            this.label1.Location = new System.Drawing.Point(786, 268);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 41);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Main";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Visible = false;
-            // 
             // frmBlockDrop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(975, 541);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnChoiLai);
             this.Controls.Add(this.btnChoi);
             this.Controls.Add(this.lblMaxPoint);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.lblDiem);
+            this.Controls.Add(this.lblPoint);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.label8);
@@ -319,11 +306,13 @@
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.dataGridView1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmBlockDrop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBlockDrop";
             this.Load += new System.EventHandler(this.frmBlockDrop_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmBlockDrop_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -345,12 +334,11 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label lblMaxPoint;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lblDiem;
+        private System.Windows.Forms.Label lblPoint;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnChoiLai;
         private System.Windows.Forms.Button btnChoi;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label lblMain;
-        private System.Windows.Forms.Label label1;
     }
 }
