@@ -2,6 +2,7 @@
 {
     partial class frmSpeedTestABC
     {
+        public string strcmbTestABC;
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -71,6 +72,7 @@
             // 
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Image = global::WindowsFormsApplication1.Properties.Resources.circle_icon;
             this.label1.Location = new System.Drawing.Point(357, 27);
             this.label1.Name = "label1";
@@ -174,7 +176,6 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "i";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -425,7 +426,7 @@
             this.btnChoi.TabIndex = 2;
             this.btnChoi.Text = "Chơi";
             this.btnChoi.UseVisualStyleBackColor = false;
-            this.btnChoi.Click += new System.EventHandler(this.button1_Click);
+            this.btnChoi.Click += new System.EventHandler(this.btnChoi_Click);
             // 
             // timer1
             // 

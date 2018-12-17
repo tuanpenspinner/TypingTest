@@ -31,8 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangki));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtPasswordagaint = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsename = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblUsename = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.lblUseNameInvalid = new System.Windows.Forms.Label();
             this.lblPassWordCompare = new System.Windows.Forms.Label();
@@ -40,9 +43,6 @@
             this.lblUseNameNull = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDangki = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblUsename = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -77,6 +77,20 @@
             this.txtPasswordagaint.Size = new System.Drawing.Size(213, 29);
             this.txtPasswordagaint.TabIndex = 2;
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(21, 138);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(161, 35);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Nhập lại Password";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -96,12 +110,41 @@
             this.txtUsename.Size = new System.Drawing.Size(213, 29);
             this.txtUsename.TabIndex = 0;
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Location = new System.Drawing.Point(21, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(161, 35);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Password";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblUsename
+            // 
+            this.lblUsename.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblUsename.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblUsename.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsename.Image = ((System.Drawing.Image)(resources.GetObject("lblUsename.Image")));
+            this.lblUsename.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblUsename.Location = new System.Drawing.Point(21, 44);
+            this.lblUsename.Name = "lblUsename";
+            this.lblUsename.Size = new System.Drawing.Size(161, 35);
+            this.lblUsename.TabIndex = 1;
+            this.lblUsename.Text = "UseName";
+            this.lblUsename.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnThoat
             // 
             this.btnThoat.AutoSize = true;
             this.btnThoat.BackColor = System.Drawing.SystemColors.Control;
             this.btnThoat.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.Black;
+            this.btnThoat.Image = global::WindowsFormsApplication1.Properties.Resources.Hopstarter_Soft_Scraps_Button_Close;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThoat.Location = new System.Drawing.Point(546, 319);
             this.btnThoat.Name = "btnThoat";
@@ -190,53 +233,11 @@
             this.btnDangki.UseVisualStyleBackColor = true;
             this.btnDangki.Click += new System.EventHandler(this.btnDangki_Click);
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(21, 138);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 35);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Nhập lại Password";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(21, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 35);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Password";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblUsename
-            // 
-            this.lblUsename.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblUsename.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblUsename.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsename.Image = ((System.Drawing.Image)(resources.GetObject("lblUsename.Image")));
-            this.lblUsename.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblUsename.Location = new System.Drawing.Point(21, 44);
-            this.lblUsename.Name = "lblUsename";
-            this.lblUsename.Size = new System.Drawing.Size(161, 35);
-            this.lblUsename.TabIndex = 1;
-            this.lblUsename.Text = "UseName";
-            this.lblUsename.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // frmDangki
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GrayText;
+            this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(695, 375);
             this.Controls.Add(this.lblUseNameInvalid);
             this.Controls.Add(this.lblPassWordCompare);

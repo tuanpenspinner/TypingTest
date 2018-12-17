@@ -15,11 +15,6 @@ namespace WindowsFormsApplication1
         Database Db = new Database();
         int maxPoint=0;
         string UseName;
-        public frmFlappyBird()
-        {
-            InitializeComponent();
-        }
-
         int xCot1, xCot2, xCot3;
         int yCotTren1, yCotTren2, yCotTren3;
         int yCotDuoi1, yCotDuoi2, yCotDuoi3;
@@ -28,6 +23,12 @@ namespace WindowsFormsApplication1
         int yBird = 200;
         int xBird = 400;
         int Point = 0;
+
+        public frmFlappyBird()
+        {
+            InitializeComponent();
+        }
+
         private void frmFlappyBird_KeyPress(object sender, KeyPressEventArgs e)
         {
 

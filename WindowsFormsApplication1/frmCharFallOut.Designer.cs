@@ -114,7 +114,7 @@
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(736, 205);
+            this.label2.Location = new System.Drawing.Point(723, 188);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 51);
             this.label2.TabIndex = 4;
@@ -125,7 +125,7 @@
             this.lblDiem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblDiem.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiem.ForeColor = System.Drawing.Color.Maroon;
-            this.lblDiem.Location = new System.Drawing.Point(870, 205);
+            this.lblDiem.Location = new System.Drawing.Point(857, 188);
             this.lblDiem.Name = "lblDiem";
             this.lblDiem.Size = new System.Drawing.Size(58, 51);
             this.lblDiem.TabIndex = 5;
@@ -165,7 +165,7 @@
             this.lblMaxPoint.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblMaxPoint.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaxPoint.ForeColor = System.Drawing.Color.Black;
-            this.lblMaxPoint.Location = new System.Drawing.Point(868, 146);
+            this.lblMaxPoint.Location = new System.Drawing.Point(857, 145);
             this.lblMaxPoint.Name = "lblMaxPoint";
             this.lblMaxPoint.Size = new System.Drawing.Size(51, 43);
             this.lblMaxPoint.TabIndex = 9;
@@ -177,7 +177,7 @@
             this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(720, 146);
+            this.label3.Location = new System.Drawing.Point(709, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(160, 43);
             this.label3.TabIndex = 8;

@@ -22,6 +22,7 @@ namespace WindowsFormsApplication1
 
         private void btnDangKi_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmDangki frm = new frmDangki();
             frm.ShowDialog();
         }

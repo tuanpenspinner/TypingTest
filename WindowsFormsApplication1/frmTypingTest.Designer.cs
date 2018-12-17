@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtTest = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblUseName = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnChoiLai = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
@@ -40,37 +40,9 @@
             this.lblMinute = new System.Windows.Forms.Label();
             this.txtTyping = new System.Windows.Forms.TextBox();
             this.TimerStart = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblUseName = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.txtTest = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.txtTest);
-            this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(285, 434);
-            this.panel1.TabIndex = 0;
-            // 
-            // txtTest
-            // 
-            this.txtTest.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTest.BackColor = System.Drawing.SystemColors.Control;
-            this.txtTest.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtTest.Enabled = false;
-            this.txtTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTest.Location = new System.Drawing.Point(12, 6);
-            this.txtTest.Multiline = true;
-            this.txtTest.Name = "txtTest";
-            this.txtTest.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.txtTest.Size = new System.Drawing.Size(447, 428);
-            this.txtTest.TabIndex = 0;
             // 
             // panel2
             // 
@@ -90,10 +62,33 @@
             this.panel2.Size = new System.Drawing.Size(558, 434);
             this.panel2.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(5, 396);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 29);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "UseName:";
+            // 
+            // lblUseName
+            // 
+            this.lblUseName.AutoSize = true;
+            this.lblUseName.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUseName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblUseName.Location = new System.Drawing.Point(141, 396);
+            this.lblUseName.Name = "lblUseName";
+            this.lblUseName.Size = new System.Drawing.Size(216, 29);
+            this.lblUseName.TabIndex = 23;
+            this.lblUseName.Text = "TuanPenSpinner";
+            // 
             // btnThoat
             // 
             this.btnThoat.AutoSize = true;
             this.btnThoat.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Image = global::WindowsFormsApplication1.Properties.Resources.Hopstarter_Soft_Scraps_Button_Close;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -109,7 +104,7 @@
             // btnChoiLai
             // 
             this.btnChoiLai.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnChoiLai.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnChoiLai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChoiLai.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChoiLai.Location = new System.Drawing.Point(387, 10);
             this.btnChoiLai.Name = "btnChoiLai";
@@ -123,7 +118,7 @@
             // btnStart
             // 
             this.btnStart.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnStart.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStart.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.ForeColor = System.Drawing.Color.Lime;
             this.btnStart.Image = global::WindowsFormsApplication1.Properties.Resources.Play;
@@ -175,6 +170,7 @@
             // 
             this.txtTyping.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtTyping.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtTyping.Enabled = false;
             this.txtTyping.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTyping.Location = new System.Drawing.Point(0, 87);
             this.txtTyping.Multiline = true;
@@ -187,52 +183,41 @@
             this.TimerStart.Interval = 1000;
             this.TimerStart.Tick += new System.EventHandler(this.TimerStart_Tick);
             // 
-            // label1
+            // txtTest
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(5, 396);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 29);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "UseName:";
-            // 
-            // lblUseName
-            // 
-            this.lblUseName.AutoSize = true;
-            this.lblUseName.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUseName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblUseName.Location = new System.Drawing.Point(141, 396);
-            this.lblUseName.Name = "lblUseName";
-            this.lblUseName.Size = new System.Drawing.Size(216, 29);
-            this.lblUseName.TabIndex = 23;
-            this.lblUseName.Text = "TuanPenSpinner";
+            this.txtTest.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTest.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTest.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTest.Location = new System.Drawing.Point(12, 6);
+            this.txtTest.Multiline = true;
+            this.txtTest.Name = "txtTest";
+            this.txtTest.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.txtTest.Size = new System.Drawing.Size(449, 428);
+            this.txtTest.TabIndex = 0;
             // 
             // frmTypingTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1025, 434);
+            this.Controls.Add(this.txtTest);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.Name = "frmTypingTest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Speed Typing Test";
             this.Load += new System.EventHandler(this.frmTypingTest_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtTest;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblSecond;
@@ -244,5 +229,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblUseName;
+        private System.Windows.Forms.TextBox txtTest;
     }
 }
