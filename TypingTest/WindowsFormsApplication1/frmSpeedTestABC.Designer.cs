@@ -457,7 +457,8 @@
             this.btnThoat.Location = new System.Drawing.Point(780, 467);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(136, 68);
-            this.btnThoat.TabIndex = 7;
+            this.btnThoat.TabIndex = 33;
+            this.btnThoat.TabStop = false;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = false;
@@ -530,7 +531,6 @@
             this.MaximizeBox = false;
             this.Name = "frmSpeedTestABC";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SpeedTestABC";
             this.Load += new System.EventHandler(this.frmSpeedTestABC_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmSpeedTestABC_KeyPress);
             this.ResumeLayout(false);

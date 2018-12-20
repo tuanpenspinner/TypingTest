@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-
+    
     static class Program
     {
         /// <summary>
@@ -19,12 +19,12 @@ namespace WindowsFormsApplication1
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmMenu());
+            Application.Run(new frmMenu());
             //Application.Run(new frmSpeedTestABC());
             //Application.Run(new frmFlappyBird());
             //Application.Run(new frmTypingTest());
             //Application.Run(new frmCharFallOut());
-            Application.Run(new frmLogin());
+            //Application.Run(new frmLogin());
             //Application.Run(new frmScore());
             //Application.Run(new frmEggDrop());
             //Application.Run(new frmBlockDrop());
