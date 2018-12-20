@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1
       
         public void Connection()
         {
-            string StringConnection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Thanh Tuan\Desktop\TypingTest\TypingTest\DataAccount.mdb";
+            string StringConnection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\#Dai_K-Du\Desktop\TypingTest-master\TypingTest\DataAccount.mdb";
             Connec = new OleDbConnection(StringConnection);
             if (Connec.State != ConnectionState.Open)
             {

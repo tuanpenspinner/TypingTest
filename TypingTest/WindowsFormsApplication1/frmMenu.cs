@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1
 {
     public partial class frmMenu : Form
     {
-        
+
         public frmMenu()
         {
             InitializeComponent();
@@ -20,15 +20,15 @@ namespace WindowsFormsApplication1
 
         private void btnTestABC_Click(object sender, EventArgs e)
         {
-            if(cmbTestABC.Text!="")
-            { 
+            if (cmbTestABC.Text != "")
+            {
                 this.Dispose();
                 frmSpeedTestABC frm = new frmSpeedTestABC();
                 frm.strcmbTestABC = cmbTestABC.SelectedItem.ToString();
                 frm.ShowDialog();
             }
             btnTextPractice.Visible = false;
-            cmbTestABC.Visible = true;  
+            cmbTestABC.Visible = true;
         }
 
         private void btnTextPractice_Click(object sender, EventArgs e)
@@ -36,23 +36,32 @@ namespace WindowsFormsApplication1
             this.Dispose();
             frmTypingTest frm = new frmTypingTest();
             frm.ShowDialog();
-           
+
         }
 
         private void btnFlappyBird_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            frmFlappyBird frm = new frmFlappyBird();
-            frm.ShowDialog();
-           
+            if (cmbGame.Text != "")
+            {
+                strLevel = cmbGame.SelectedItem.ToString();
+                this.Dispose();
+                frmFlappyBird frm = new frmFlappyBird();
+                frm.ShowDialog();
+            }
+            
+
         }
 
         private void btnCharFallOut_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            frmCharFallOut frm = new frmCharFallOut();
-            frm.ShowDialog();
-            
+            if (cmbGame.Text != "")
+            {
+                strLevel = cmbGame.SelectedItem.ToString();
+                this.Dispose();
+                frmCharFallOut frm = new frmCharFallOut();
+                frm.ShowDialog();
+            }
+           
         }
 
         private void frmMenu_Load(object sender, EventArgs e)
@@ -60,10 +69,12 @@ namespace WindowsFormsApplication1
             Database Db = new Database();
             Db.Connection();
             lblUseName.Text = Db.GetAcountUsing(Db.Connec);
+            lblLevel.Visible = false;
             btnCharFallOut.Visible = false;
             btnFlappyBird.Visible = false;
             btnEggDrop.Visible = false;
             btnTestABC.Visible = false;
+            cmbGame.Visible = false;
             btnTextPractice.Visible = false;
             btnBlockDrop.Visible = false;
             cmbTestABC.Visible = false;
@@ -75,6 +86,8 @@ namespace WindowsFormsApplication1
             btnTestABC.Visible = true;
             btnTextPractice.Visible = true;
 
+            lblLevel.Visible = false;
+            cmbGame.Visible = false;
             btnBlockDrop.Visible = false;
             btnEggDrop.Visible = false;
             btnCharFallOut.Visible = false;
@@ -88,6 +101,8 @@ namespace WindowsFormsApplication1
             btnTestABC.Visible = false;
             btnTextPractice.Visible = false;
 
+            lblLevel.Visible = true;
+            cmbGame.Visible = true;
             btnBlockDrop.Visible = true;
             btnEggDrop.Visible = true;
             btnCharFallOut.Visible = true;
@@ -110,16 +125,26 @@ namespace WindowsFormsApplication1
 
         private void btnEggDrop_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            frmEggDrop frm = new frmEggDrop();
-            frm.ShowDialog();
+            if (cmbGame.Text != "")
+            {
+                strLevel = cmbGame.SelectedItem.ToString();
+                this.Dispose();
+                frmEggDrop frm = new frmEggDrop();
+                frm.ShowDialog();
+            }
+          
         }
 
         private void btnBlockDrop_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            frmBlockDrop frm = new frmBlockDrop();
-            frm.ShowDialog();
+            if (cmbGame.Text != "")
+            {
+                strLevel = cmbGame.SelectedItem.ToString();
+                this.Dispose();
+                frmBlockDrop frm = new frmBlockDrop();
+                frm.ShowDialog();
+            }
+           
         }
     }
 

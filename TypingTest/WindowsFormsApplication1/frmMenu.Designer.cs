@@ -1,10 +1,13 @@
 ﻿namespace WindowsFormsApplication1
 {
+   
     partial class frmMenu
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
+        /// 
+        public string strLevel;
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
@@ -45,6 +48,8 @@
             this.btnTyPingGame = new System.Windows.Forms.Button();
             this.btnSpeedTest = new System.Windows.Forms.Button();
             this.cmbTestABC = new System.Windows.Forms.ComboBox();
+            this.cmbGame = new System.Windows.Forms.ComboBox();
+            this.lblLevel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,12 +59,12 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Matura MT Script Capitals", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(241, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(477, 85);
+            this.label1.Size = new System.Drawing.Size(401, 85);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Menu lựa chọn";
+            this.label1.Text = "Typing Test";
             // 
             // label2
             // 
@@ -122,9 +127,9 @@
             this.btnScore.Font = new System.Drawing.Font("Kristen ITC", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnScore.ForeColor = System.Drawing.Color.Black;
             this.btnScore.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnScore.Location = new System.Drawing.Point(25, 388);
+            this.btnScore.Location = new System.Drawing.Point(235, 387);
             this.btnScore.Name = "btnScore";
-            this.btnScore.Size = new System.Drawing.Size(447, 127);
+            this.btnScore.Size = new System.Drawing.Size(437, 128);
             this.btnScore.TabIndex = 10;
             this.btnScore.Text = "Thành tích bản thân";
             this.btnScore.UseVisualStyleBackColor = false;
@@ -133,9 +138,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WindowsFormsApplication1.Properties.Resources.smile;
-            this.pictureBox2.Location = new System.Drawing.Point(848, 156);
+            this.pictureBox2.Location = new System.Drawing.Point(917, 9);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(277, 173);
+            this.pictureBox2.Size = new System.Drawing.Size(213, 173);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
@@ -143,9 +148,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.Games_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(712, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(695, 9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(413, 139);
+            this.pictureBox1.Size = new System.Drawing.Size(213, 139);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -275,11 +280,37 @@
             this.cmbTestABC.Items.AddRange(new object[] {
             "A->Z",
             "0->9",
-            "Random"});
+            "Random(~!@#$)"});
             this.cmbTestABC.Location = new System.Drawing.Point(527, 129);
             this.cmbTestABC.Name = "cmbTestABC";
-            this.cmbTestABC.Size = new System.Drawing.Size(145, 33);
+            this.cmbTestABC.Size = new System.Drawing.Size(162, 33);
             this.cmbTestABC.TabIndex = 15;
+            // 
+            // cmbGame
+            // 
+            this.cmbGame.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cmbGame.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbGame.FormattingEnabled = true;
+            this.cmbGame.Items.AddRange(new object[] {
+            "Easy",
+            "Medium",
+            "Hard"});
+            this.cmbGame.Location = new System.Drawing.Point(879, 302);
+            this.cmbGame.Name = "cmbGame";
+            this.cmbGame.Size = new System.Drawing.Size(145, 33);
+            this.cmbGame.TabIndex = 16;
+            // 
+            // lblLevel
+            // 
+            this.lblLevel.AutoSize = true;
+            this.lblLevel.Font = new System.Drawing.Font("Modern No. 20", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLevel.ForeColor = System.Drawing.Color.Blue;
+            this.lblLevel.Location = new System.Drawing.Point(767, 304);
+            this.lblLevel.Name = "lblLevel";
+            this.lblLevel.Size = new System.Drawing.Size(92, 31);
+            this.lblLevel.TabIndex = 17;
+            this.lblLevel.Text = "Level:";
             // 
             // frmMenu
             // 
@@ -287,6 +318,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(1128, 547);
+            this.Controls.Add(this.lblLevel);
+            this.Controls.Add(this.cmbGame);
             this.Controls.Add(this.cmbTestABC);
             this.Controls.Add(this.btnBlockDrop);
             this.Controls.Add(this.lblUseName);
@@ -333,5 +366,7 @@
         private System.Windows.Forms.Label lblUseName;
         private System.Windows.Forms.Button btnBlockDrop;
         private System.Windows.Forms.ComboBox cmbTestABC;
+        private System.Windows.Forms.ComboBox cmbGame;
+        private System.Windows.Forms.Label lblLevel;
     }
 }

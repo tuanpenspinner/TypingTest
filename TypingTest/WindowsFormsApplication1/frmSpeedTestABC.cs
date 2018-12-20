@@ -21,7 +21,22 @@ namespace WindowsFormsApplication1
         Random rd = new Random();
         private void frmSpeedTestABC_Load(object sender, EventArgs e)
         {
-            frmSpeedTestABC_Load_09(sender, e);
+            if(strcmbTestABC=="A->Z")
+            {
+                frmSpeedTestABC_Load_ABC(sender, e);
+            }
+
+            if (strcmbTestABC == "0->9")
+            {
+                frmSpeedTestABC_Load_09(sender, e);
+            }
+
+            if(strcmbTestABC== "Random(~!@#$)")
+            {
+                frmSpeedTestABC_Load_Random(sender, e);
+                
+            }
+
             this.KeyPreview = false;
             btnChoiLai.Visible = false;
 
@@ -272,7 +287,7 @@ namespace WindowsFormsApplication1
                 }
             }
 
-            if (strcmbTestABC == "0->9")
+            if (strcmbTestABC == "0->9"|| strcmbTestABC== "Random(~!@#$)")
             {
                 if (e.KeyChar == Convert.ToChar( label1.Text))
                 {
@@ -444,6 +459,38 @@ namespace WindowsFormsApplication1
             label26.Text = "z";
         }
 
+        private void frmSpeedTestABC_Load_Random(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.Red;
+            label1.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label2.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label3.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label4.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label5.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label6.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label7.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label8.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label9.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label10.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label11.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label13.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label12.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label14.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label15.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label16.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label17.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label18.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label19.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label20.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label21.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label22.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label23.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label24.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label25.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+            label26.Text = Convert.ToChar(rd.Next(34, 47)).ToString();
+           
+        }
+
         private void frmSpeedTestABC_Load_09(object sender, EventArgs e)
         {
             label1.ForeColor = Color.Red;
@@ -571,6 +618,7 @@ namespace WindowsFormsApplication1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            
             timer1.Interval = 1000;
             seconds++;
             if (seconds <= 59)
@@ -603,6 +651,7 @@ namespace WindowsFormsApplication1
 
         private void btnChoiLai_Click(object sender, EventArgs e)
         {
+            this.Focus();
             frmSpeedTestABC_Load_Start(sender, e);
             btnChoiLai.Visible = false;
             timer1.Start();
