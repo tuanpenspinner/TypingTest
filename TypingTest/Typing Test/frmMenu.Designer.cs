@@ -7,7 +7,7 @@
         /// Required designer variable.
         /// </summary>
         /// 
-        public string strLevel;
+        
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
@@ -158,7 +158,6 @@
             // btnCharFallOut
             // 
             this.btnCharFallOut.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCharFallOut.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.btnCharFallOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCharFallOut.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCharFallOut.Image = global::WindowsFormsApplication1.Properties.Resources.Google_Noto_Emoji_Travel_Places_42462_mountain;

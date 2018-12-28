@@ -130,9 +130,6 @@
   <data name="Pipe_flappybird" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pipe_flappybird.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Register" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Register.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Kunai-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kunai-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -168,6 +165,12 @@
   </data>
   <data name="Play agian" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Play agian.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Register" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Register.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Reset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Reset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pipe_flappybird1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pipe_flappybird1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,13 +250,16 @@
   <data name="Thac_Nước_Naruto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thac_Nước_Naruto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Green-Block-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Green-Block-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="alphabet-blocks-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alphabet-blocks-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Femfoyou-Angry-Birds-Angry-bird-white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Femfoyou-Angry-Birds-Angry-bird-white.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Green-Block-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Green-Block-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mountain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mountain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

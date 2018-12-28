@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
+   
     public partial class frmMenu : Form
     {
 
@@ -17,7 +18,6 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-
         private void btnTestABC_Click(object sender, EventArgs e)
         {
             if (cmbTestABC.Text != "")
@@ -43,22 +43,21 @@ namespace WindowsFormsApplication1
         {
             if (cmbGame.Text != "")
             {
-                strLevel = cmbGame.SelectedItem.ToString();
+               
                 this.Dispose();
                 frmFlappyBird frm = new frmFlappyBird();
+                frm.strLevel = cmbGame.SelectedItem.ToString();
                 frm.ShowDialog();
-            }
-            
-
+            }           
         }
 
         private void btnCharFallOut_Click(object sender, EventArgs e)
         {
             if (cmbGame.Text != "")
             {
-                strLevel = cmbGame.SelectedItem.ToString();
                 this.Dispose();
                 frmCharFallOut frm = new frmCharFallOut();
+                frm.strLevel = cmbGame.SelectedItem.ToString();
                 frm.ShowDialog();
             }
            
@@ -127,9 +126,9 @@ namespace WindowsFormsApplication1
         {
             if (cmbGame.Text != "")
             {
-                strLevel = cmbGame.SelectedItem.ToString();
                 this.Dispose();
                 frmEggDrop frm = new frmEggDrop();
+                frm.strLevel = cmbGame.SelectedItem.ToString();
                 frm.ShowDialog();
             }
           
@@ -139,9 +138,9 @@ namespace WindowsFormsApplication1
         {
             if (cmbGame.Text != "")
             {
-                strLevel = cmbGame.SelectedItem.ToString();
                 this.Dispose();
                 frmBlockDrop frm = new frmBlockDrop();
+                frm.strLevel = cmbGame.SelectedItem.ToString();
                 frm.ShowDialog();
             }
            

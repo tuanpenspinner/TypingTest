@@ -6,7 +6,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+        public string strLevel;
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -227,7 +227,6 @@
             this.Name = "frmCharFallOut";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CharFallOut";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCharFallOut_FormClosing);
             this.Load += new System.EventHandler(this.frmTextFallOut_Load);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();

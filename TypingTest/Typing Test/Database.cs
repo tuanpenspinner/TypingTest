@@ -11,7 +11,7 @@ namespace WindowsFormsApplication1
     public class Database
     {
         public OleDbConnection Connec { get; set; }
-      
+
         public void Connection()
         {
             string StringConnection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\#Dai_K-Du\Desktop\TypingTest\TypingTest\DataAccount.mdb";
@@ -25,7 +25,7 @@ namespace WindowsFormsApplication1
 
         public string GetAcountUsing(OleDbConnection Connec)
         {
-            string UseName="";
+            string UseName = "";
             string sql = "SELECT UseName FROM TbUser";
             OleDbCommand cmd = new OleDbCommand(sql, Connec);
             OleDbDataReader dr = cmd.ExecuteReader();
@@ -37,12 +37,12 @@ namespace WindowsFormsApplication1
             return UseName;
         }
 
-        public int MaxScoreCharFallOut(OleDbConnection Connec,string UseName)
+        public int MaxScoreCharFallOut(OleDbConnection Connec, string UseName)
         {
-            string maxscore="";
+            string maxscore = "";
             int max = 0;
 
-            string sql = "SELECT* FROM TbDataAccount WHERE UseName='"+UseName+"'";
+            string sql = "SELECT* FROM TbDataAccount WHERE UseName='" + UseName + "'";
 
             OleDbCommand cmd = new OleDbCommand(sql, Connec);
             OleDbDataReader dr = cmd.ExecuteReader();
@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1
             return max;
         }
 
-        public void SaveMaxCharFallOut(OleDbConnection Connec, string UseName,int PointMax)
+        public void SaveMaxCharFallOut(OleDbConnection Connec, string UseName, int PointMax)
         {
             //string sql = "SELECT* FROM TbDataAccount WHERE UseName='" + UseName + "'";
             string sql = "UPDATE TbDataAccount SET PointCharFallOut= '" + PointMax + "' WHERE UseName='" + UseName + "'";
@@ -130,6 +130,39 @@ namespace WindowsFormsApplication1
         public void SaveMaxBlockDrop(OleDbConnection Connec, string UseName, int PointMax)
         {
             string sql = "UPDATE TbDataAccount SET PointBlockDrop= '" + PointMax + "' WHERE UseName='" + UseName + "'";
+            OleDbCommand cmd = new OleDbCommand(sql, Connec);
+            cmd.ExecuteNonQuery();
+        }
+
+        public int MaxScoreSpeedTestABC(OleDbConnection Connec, string UseName)
+        {
+            string maxscore = "";
+            int max = 0;
+
+            string sql = "SELECT* FROM TbDataAccount WHERE UseName='" + UseName + "'";
+
+            OleDbCommand cmd = new OleDbCommand(sql, Connec);
+            OleDbDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                maxscore = dr["PointTestABC"].ToString();
+                max = Convert.ToInt32(maxscore);
+            }
+            return max;
+        }
+
+        public void SaveMaxSpeedTestABC(OleDbConnection Connec, string UseName, int PointMax)
+        {
+            string sql = "UPDATE TbDataAccount SET PointTestABC= '" + PointMax + "' WHERE UseName='" + UseName + "'";
+            OleDbCommand cmd = new OleDbCommand(sql, Connec);
+            cmd.ExecuteNonQuery();
+        }
+
+        public void ResetScore(OleDbConnection Connec, string UseName)
+        {
+            int reset = 0;
+
+            string sql = "UPDATE TbDataAccount SET PointTestABC='" + reset + "',PointFlappyBird='" + reset + "',PointEggDrop='" + reset + "' , PointCharFallOut='" + reset + "' , PointTypingTest='" + reset + "' , PointBlockDrop='" + reset + "' WHERE UseName='" + UseName + "'";
             OleDbCommand cmd = new OleDbCommand(sql, Connec);
             cmd.ExecuteNonQuery();
         }

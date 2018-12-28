@@ -12,6 +12,10 @@ namespace WindowsFormsApplication1
 {
     public partial class frmSpeedTestABC : Form
     {
+        Database Db = new Database();
+        string UseName = "";
+        int MaxSpeed = 0;
+        int Speed = 0;
         public frmSpeedTestABC()
         {
             InitializeComponent();
@@ -21,6 +25,7 @@ namespace WindowsFormsApplication1
         Random rd = new Random();
         private void frmSpeedTestABC_Load(object sender, EventArgs e)
         {
+            frmSpeedTestABC_Load_MaxSpeed(sender, e);
             if(strcmbTestABC=="A->Z")
             {
                 frmSpeedTestABC_Load_ABC(sender, e);
@@ -40,6 +45,42 @@ namespace WindowsFormsApplication1
             this.KeyPreview = false;
             btnChoiLai.Visible = false;
 
+        }
+
+        private void frmSpeedTestABC_Load_MaxSpeed(object sender, EventArgs e)
+        {
+            Db.Connection();
+            UseName = Db.GetAcountUsing(Db.Connec);
+            lblUseName.Text = UseName;
+            MaxSpeed = Db.MaxScoreSpeedTestABC(Db.Connec, UseName);
+            if (MaxSpeed >= 60)
+            {
+                lblMaxMinute.Text = "0" + (MaxSpeed / 60);
+                if (MaxSpeed % 60 >= 10)
+                {
+                    lblMaxSencond.Text = (MaxSpeed % 60).ToString();
+                }
+
+                else
+                {
+                    lblMaxSencond.Text = (MaxSpeed % 60) + "0";
+                }
+
+            }
+
+            else
+            {
+                lblMaxMinute.Text = "00";
+                if (MaxSpeed >= 10)
+                {
+                    lblMaxSencond.Text = MaxSpeed.ToString();
+                }
+
+                else
+                {
+                    lblMaxSencond.Text = MaxSpeed + "0";
+                }
+            }
         }
 
         private void ChangeColorLabel()
@@ -529,6 +570,7 @@ namespace WindowsFormsApplication1
 
         private void frmSpeedTestABC_Load_Begin(object sender, EventArgs e)
         {
+            frmSpeedTestABC_Load_MaxSpeed(sender, e);
             this.KeyPreview = false;
 
             label1.Visible = true;
@@ -558,7 +600,7 @@ namespace WindowsFormsApplication1
             label25.Visible = true;
             label26.Visible = true;
 
-            label1.ForeColor = Color.Black;
+            label1.ForeColor = Color.Red;
             label2.ForeColor = Color.Black;
             label3.ForeColor = Color.Black;
             label4.ForeColor = Color.Black;
@@ -589,6 +631,11 @@ namespace WindowsFormsApplication1
 
         private void GameOver()
         {
+            Speed = seconds + minutes * 60;
+            if(Speed<MaxSpeed||MaxSpeed==0)
+            {
+                Db.SaveMaxSpeedTestABC(Db.Connec, UseName, Speed);
+            }
             if(strcmbTestABC=="A->Z")
             {
                 if (minutes == 0)
@@ -610,6 +657,19 @@ namespace WindowsFormsApplication1
                 else
                 {
                     MessageBox.Show("Thời gian bạn đánh hết chữ cái trên bàn phím từ 0->9 là " + lblMinute.Text + " phút " + lblSenconds.Text + "giây", "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+            }
+
+
+            if (strcmbTestABC == "Random(~!@#$)")
+            {
+                if (minutes == 0)
+                {
+                    MessageBox.Show("Thời gian bạn đánh hết chữ cái (~!@#$) trên bàn phím từ là " + lblSenconds.Text + " giây", "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+                else
+                {
+                    MessageBox.Show("Thời gian bạn đánh hết chữ cái (~!@#$) trên bàn phím từ là " + lblMinute.Text + " phút " + lblSenconds.Text + "giây", "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
             }
 

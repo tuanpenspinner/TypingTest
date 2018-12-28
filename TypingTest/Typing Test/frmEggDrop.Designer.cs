@@ -6,7 +6,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+        public string strLevel;
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -265,7 +265,7 @@
             // 
             // timer
             // 
-            this.timer.Interval = 10;
+            this.timer.Interval = 30;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // label1

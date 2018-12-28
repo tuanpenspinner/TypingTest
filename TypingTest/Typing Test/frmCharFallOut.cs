@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
     public partial class frmCharFallOut : Form
     {
         int dem = 0;
-        int i = 1;
+        int Level= 1;
         int max;
         int maxPoint;
         string UseName;
@@ -30,6 +30,19 @@ namespace WindowsFormsApplication1
         {
             timer1.Interval = 1;
 
+            if (strLevel == "Easy")
+            {
+                Level = 1;
+            }
+
+            if (strLevel == "Medium")
+            {
+                Level = 2;
+            }
+            if (strLevel == "Hard")
+            {
+                Level = 3;
+            }
             if (textBox1.Text == lblChar.Text)
             {
                 dem++;
@@ -45,8 +58,6 @@ namespace WindowsFormsApplication1
                 {
                     lblDiem.Text = "0" + dem;
                 }
-
-                if (dem % 10 == 0) i++;
                 textBox1.Text = "";
             }
 
@@ -56,7 +67,7 @@ namespace WindowsFormsApplication1
                 GameOver();
 
             }
-            lblChar.Top += i;
+            lblChar.Top += Level;
         }
 
         private void GameOver()
@@ -139,14 +150,7 @@ namespace WindowsFormsApplication1
             frm.ShowDialog();
         }
 
-        private void frmCharFallOut_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Bạn có chắc chắn muốn thoát không ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == DialogResult.Cancel)
-
-            {
-                e.Cancel=true;
-            }
-        }
+    
 
     }
 }

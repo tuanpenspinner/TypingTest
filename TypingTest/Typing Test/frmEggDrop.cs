@@ -29,6 +29,7 @@ namespace WindowsFormsApplication1
         int Score = 0;
         int Heart = 3;
         int Egg1;
+        int Level = 10;
 
         private void btnChoiLai_Click(object sender, EventArgs e)
         {
@@ -171,12 +172,25 @@ namespace WindowsFormsApplication1
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            timer.Interval = 1;
+
+            if (strLevel=="Easy")
+            {
+                Level = 1;
+            }
+
+            if (strLevel == "Medium")
+            {
+                Level = 2;
+            }
+            if (strLevel == "Hard")
+            {
+                Level = 3;
+            }
             switch (Egg1)
             {
                 case 1:
                     {
-                        yEgg1 += 1;
+                        yEgg1 += Level;
                         picEgg1.Location = new Point(xEgg1, yEgg1);
                         if (yEgg1 + picEgg1.Height >= yBasket)
                         {
@@ -220,7 +234,7 @@ namespace WindowsFormsApplication1
                     }
                 case 2:
                     {
-                        yEgg2 += 1;
+                        yEgg2 += Level;
                         picEgg2.Location = new Point(xEgg2, yEgg2);
                         if (yEgg2 + picEgg2.Height>= yBasket)
                         {
@@ -262,7 +276,7 @@ namespace WindowsFormsApplication1
                     }
                 case 3:
                     {
-                        yEgg3 += 1;
+                        yEgg3 += Level;
                         picEgg3.Location = new Point(xEgg3, yEgg3);
                         if (yEgg3 + picEgg3.Height >= yBasket)
                         {
@@ -305,7 +319,7 @@ namespace WindowsFormsApplication1
                     }
                 case 4:
                     {
-                        yEgg4 += 1;
+                        yEgg4 += Level;
                         picEgg4.Location = new Point(xEgg4, yEgg4);
                         if (yEgg4 + picEgg4.Height >= yBasket)
                         {
@@ -348,7 +362,7 @@ namespace WindowsFormsApplication1
                     }
                 case 5:
                     {
-                        yEgg5 += 1;
+                        yEgg5 += Level;
                         picEgg5.Location = new Point(xEgg5, yEgg5);
                         if (yEgg5 + picEgg5.Height >= yBasket)
                         {

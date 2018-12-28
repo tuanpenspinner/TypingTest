@@ -115,6 +115,12 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRank.Designer.cs">
+      <DependentUpon>frmRank.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSpeedTestABC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRank.resx">
+      <DependentUpon>frmRank.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmScore.resx">
       <DependentUpon>frmScore.cs</DependentUpon>
@@ -272,6 +281,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Green-Block-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mountain.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

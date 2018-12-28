@@ -18,8 +18,8 @@ namespace WindowsFormsApplication1
         int xCot1, xCot2, xCot3;
         int yCotTren1, yCotTren2, yCotTren3;
         int yCotDuoi1, yCotDuoi2, yCotDuoi3;
-        int KhoangCach2Thanh;
-        int KhoangCach2Cot;
+        int KhoangCach2Thanh=250;
+        int KhoangCach2Cot=200;
         int yBird = 200;
         int xBird = 400;
         int Point = 0;
@@ -120,6 +120,23 @@ namespace WindowsFormsApplication1
 
         private void frmFlappyBird_Load(object sender, EventArgs e)
         {
+            if (strLevel == "Easy")
+            {
+                KhoangCach2Thanh =450;
+                KhoangCach2Cot = 210;
+            }
+
+            if (strLevel == "Medium")
+            {
+                KhoangCach2Thanh = 350;
+                KhoangCach2Cot = 210;
+            }
+            if (strLevel == "Hard")
+            {
+                KhoangCach2Thanh = 250;
+                KhoangCach2Cot = 200;
+            }
+
             Db.Connection();
 
             UseName = Db.GetAcountUsing(Db.Connec);
@@ -154,8 +171,6 @@ namespace WindowsFormsApplication1
             int a = Convert.ToInt32(c1[0]);
             int b = Convert.ToInt32(c2[0]);
             lblBird.Text = Convert.ToString((char)rd1.Next(100, 100));
-            KhoangCach2Cot = 200;
-            KhoangCach2Thanh = 250;
             lblBird.Location = new Point(xBird, yBird);
 
             xCot1 = 900;
@@ -205,8 +220,6 @@ namespace WindowsFormsApplication1
             xCot1 -= 1;
             xCot2 -= 1;
             xCot3 -= 1;
-            KhoangCach2Cot = 200;
-            KhoangCach2Thanh = 250;
             //Cột 1
             lblCotTren1.Location = new Point(xCot1, yCotTren1);
             lblCotDuoi1.Location = new Point(xCot1, yCotDuoi1);

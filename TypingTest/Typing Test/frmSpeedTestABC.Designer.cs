@@ -66,6 +66,10 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
             this.lblUseName = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.lblMaxSencond = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.lblMaxMinute = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -385,10 +389,11 @@
             // 
             this.lblMinute.AutoSize = true;
             this.lblMinute.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblMinute.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMinute.Location = new System.Drawing.Point(322, 450);
+            this.lblMinute.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinute.ForeColor = System.Drawing.Color.Blue;
+            this.lblMinute.Location = new System.Drawing.Point(508, 475);
             this.lblMinute.Name = "lblMinute";
-            this.lblMinute.Size = new System.Drawing.Size(104, 73);
+            this.lblMinute.Size = new System.Drawing.Size(60, 42);
             this.lblMinute.TabIndex = 1;
             this.lblMinute.Text = "00";
             // 
@@ -396,10 +401,10 @@
             // 
             this.label28.AutoSize = true;
             this.label28.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(432, 450);
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(574, 475);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(50, 73);
+            this.label28.Size = new System.Drawing.Size(28, 42);
             this.label28.TabIndex = 1;
             this.label28.Text = ":";
             // 
@@ -407,10 +412,11 @@
             // 
             this.lblSenconds.AutoSize = true;
             this.lblSenconds.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSenconds.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenconds.Location = new System.Drawing.Point(488, 450);
+            this.lblSenconds.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenconds.ForeColor = System.Drawing.Color.Fuchsia;
+            this.lblSenconds.Location = new System.Drawing.Point(619, 475);
             this.lblSenconds.Name = "lblSenconds";
-            this.lblSenconds.Size = new System.Drawing.Size(104, 73);
+            this.lblSenconds.Size = new System.Drawing.Size(60, 42);
             this.lblSenconds.TabIndex = 1;
             this.lblSenconds.Text = "00";
             // 
@@ -486,12 +492,64 @@
             this.lblUseName.TabIndex = 23;
             this.lblUseName.Text = "TuanPenSpinner";
             // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label31.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label31.Location = new System.Drawing.Point(1, 467);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(161, 57);
+            this.label31.TabIndex = 36;
+            this.label31.Text = "Fastest:";
+            // 
+            // lblMaxSencond
+            // 
+            this.lblMaxSencond.AutoSize = true;
+            this.lblMaxSencond.BackColor = System.Drawing.Color.White;
+            this.lblMaxSencond.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaxSencond.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblMaxSencond.Location = new System.Drawing.Point(279, 475);
+            this.lblMaxSencond.Name = "lblMaxSencond";
+            this.lblMaxSencond.Size = new System.Drawing.Size(60, 42);
+            this.lblMaxSencond.TabIndex = 37;
+            this.lblMaxSencond.Text = "00";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.White;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label30.Location = new System.Drawing.Point(245, 475);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(28, 42);
+            this.label30.TabIndex = 38;
+            this.label30.Text = ":";
+            // 
+            // lblMaxMinute
+            // 
+            this.lblMaxMinute.AutoSize = true;
+            this.lblMaxMinute.BackColor = System.Drawing.Color.White;
+            this.lblMaxMinute.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaxMinute.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblMaxMinute.Location = new System.Drawing.Point(179, 476);
+            this.lblMaxMinute.Name = "lblMaxMinute";
+            this.lblMaxMinute.Size = new System.Drawing.Size(60, 42);
+            this.lblMaxMinute.TabIndex = 39;
+            this.lblMaxMinute.Text = "00";
+            // 
             // frmSpeedTestABC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1049, 560);
+            this.Controls.Add(this.lblMaxSencond);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.lblMaxMinute);
+            this.Controls.Add(this.label31);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.lblUseName);
             this.Controls.Add(this.btnThoat);
@@ -575,5 +633,9 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label lblUseName;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label lblMaxSencond;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label lblMaxMinute;
     }
 }

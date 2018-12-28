@@ -121,14 +121,26 @@ namespace WindowsFormsApplication1
         private void btnChoi_Click(object sender, EventArgs e)
         {
             frmBlockDrop_Load_KePreviewTrue(sender, e);
-            timer.Interval = 1000;
             timer.Start();
+            if (strLevel == "Easy")
+            {
+                timer.Interval = 1000;
+            }
+
+            if (strLevel == "Medium")
+            {
+                timer.Interval = 500;
+            }
+            if (strLevel == "Hard")
+            {
+                timer.Interval = 300;
+            }
             lblMain.Visible = true;
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
-
+         
             ylblMain += lblMain.Height;
 
             lblMain.Location = new Point(xlblMain, ylblMain);

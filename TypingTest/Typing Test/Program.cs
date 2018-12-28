@@ -19,15 +19,17 @@ namespace WindowsFormsApplication1
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMenu());
+            //Application.Run(new frmMenu());
             //Application.Run(new frmSpeedTestABC());
             //Application.Run(new frmFlappyBird());
             //Application.Run(new frmTypingTest());
             //Application.Run(new frmCharFallOut());
-            //Application.Run(new frmLogin());
+            Application.Run(new frmLogin());
             //Application.Run(new frmScore());
             //Application.Run(new frmEggDrop());
             //Application.Run(new frmBlockDrop());
+            //Application.Run(new frmRank());
+
 
             //frmLogin frm = new frmLogin();
             //if (frm.ShowDialog()==DialogResult.OK)
