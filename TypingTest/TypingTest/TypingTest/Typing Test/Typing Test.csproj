@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{590E20CA-3781-4057-83F7-A6806A1E299F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>Typing Game</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Thanh Tuan\Downloads\Bus\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E64BEF482E4D4C8BCCA4EC0499A875A6654B1316</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WindowsFormsApplication1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database.cs" />
+    <Compile Include="frmBlockDrop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBlockDrop.Designer.cs">
+      <DependentUpon>frmBlockDrop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangki.Designer.cs">
+      <DependentUpon>frmDangki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEggDrop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEggDrop.Designer.cs">
+      <DependentUpon>frmEggDrop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFlappyBird.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFlappyBird.Designer.cs">
+      <DependentUpon>frmFlappyBird.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRank.Designer.cs">
+      <DependentUpon>frmRank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSpeedTestABC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSpeedTestABC.Designer.cs">
+      <DependentUpon>frmSpeedTestABC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTypingTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTypingTest.Designer.cs">
+      <DependentUpon>frmTypingTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmCharFallOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCharFallOut.Designer.cs">
+      <DependentUpon>frmCharFallOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScore.Designer.cs">
+      <DependentUpon>frmScore.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmBlockDrop.resx">
+      <DependentUpon>frmBlockDrop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangki.resx">
+      <DependentUpon>frmDangki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEggDrop.resx">
+      <DependentUpon>frmEggDrop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFlappyBird.resx">
+      <DependentUpon>frmFlappyBird.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRank.resx">
+      <DependentUpon>frmRank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScore.resx">
+      <DependentUpon>frmScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSpeedTestABC.resx">
+      <DependentUpon>frmSpeedTestABC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTypingTest.resx">
+      <DependentUpon>frmTypingTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCharFallOut.resx">
+      <DependentUpon>frmCharFallOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Soft-Scraps-Button-Close.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons-Land-Vista-People-Office-Customer-Male-Light.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usename.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Account.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\RememberPass.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Test.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warnning.png" />
+    <None Include="Resources\win.png" />
+    <None Include="Resources\Thành Tích.png" />
+    <None Include="Resources\Thac_Nước_Naruto.png" />
+    <None Include="Resources\Thác nước.jpg" />
+    <None Include="Resources\Tonev-Windows-7-Windows-7-award.ico" />
+    <None Include="Resources\Wwalczyszyn-Android-Style-Honeycomb-Books.ico" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\register-button-1.png" />
+    <None Include="Resources\Games-icon.png" />
+    <None Include="Resources\Keyboard.png" />
+    <None Include="Resources\alphabet-blocks-icon.png" />
+    <None Include="Resources\alphabet-blocks-icon1.png" />
+    <None Include="Resources\Femfoyou-Angry-Birds-Angry-bird.ico" />
+    <None Include="Resources\Google-Noto-Emoji-Travel-Places-42462-mountain.ico" />
+    <None Include="Resources\award.png" />
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-9-Circle.ico" />
+    <None Include="Resources\circle-icon.png" />
+    <None Include="Resources\Play.png" />
+    <None Include="Resources\Play agian.png" />
+    <None Include="Resources\P.png" />
+    <None Include="Resources\Femfoyou-Angry-Birds-Angry-bird-white.ico" />
+    <None Include="Resources\Kunai-icon.png" />
+    <None Include="Resources\Pipe_flappybird.png" />
+    <None Include="Resources\Pipe_flappybird-Trên.png" />
+    <None Include="Resources\Pipe_flappybird1.png" />
+    <None Include="Resources\FlappyBird.png" />
+    <None Include="Resources\FlappyBird1.png" />
+    <None Include="Resources\BackGroundFlappyBird.jpg" />
+    <None Include="Resources\award1.png" />
+    <None Include="Resources\Egg.png" />
+    <None Include="Resources\Basket.png" />
+    <None Include="Resources\Left.png" />
+    <None Include="Resources\Heart.png" />
+    <None Include="Resources\Egg.ico" />
+    <None Include="Resources\Speed.png" />
+    <None Include="Resources\Roundicons-100-Free-Solid-Alphabet-blocks.ico" />
+    <None Include="Resources\Roundicons-100-Free-Solid-Alphabet-blocks1.ico" />
+    <None Include="Resources\smile.png" />
+    <None Include="Resources\Score.png" />
+    <None Include="Resources\Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Register.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green-Block-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mountain.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
