@@ -29,6 +29,7 @@ namespace WindowsFormsApplication1
         private void frmRank_Load(object sender, EventArgs e)
         {
             Db.Connection();
+            lblUseName.Text = Db.GetAcountUsing(Db.Connec);
             string sql = "SELECT UseName , " + strName + " FROM TbDataAccount ORDER BY " + strName + " DESC ";
         
             OleDbDataAdapter da = new OleDbDataAdapter(sql, Db.Connec);
