@@ -42,7 +42,6 @@ namespace WindowsFormsApplication1
                 Random rd = new Random();
                 int a = Convert.ToInt32(c1[0]);
                 int b = Convert.ToInt32(c2[0]);
-
                 lblBird.Text = Convert.ToString((char)rd.Next(a, b+1));
             }
         }
@@ -58,7 +57,7 @@ namespace WindowsFormsApplication1
         {
             frmFlappyBird_Load(sender, e);
             frmFlappyBird_Load_2(sender, e);
-            if (txtTu.Text != "" && txtDen.Text != "")
+            if (txtTu.Text != "" && txtDen.Text != ""&txtDen.Text.Length==1&&txtTu.Text.Length==1)
             {
 
                 btnChoiLai.Visible = false;
@@ -67,14 +66,25 @@ namespace WindowsFormsApplication1
                 Random rd1 = new Random();
                 int a = Convert.ToInt32(c1[0]);
                 int b = Convert.ToInt32(c2[0]);
-                lblBird.Text = Convert.ToString((char)rd1.Next(a, b+1));
-                lblBird.Focus();
-                timer1.Start();
-                timer.Start();
+                if(a<=b)
+                {
+                    lblBird.Text = Convert.ToString((char)rd1.Next(a, b + 1));
+                    lblBird.Focus();
+                    timer1.Start();
+                    timer.Start();
+                }
+                else
+                {
+                    MessageBox.Show("Bạn chưa nhập đủ từ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    lblBird.Focus();
+                    frmFlappyBird_Load_3(sender, e);
+                }
+
             }
             else
             {
                 MessageBox.Show("Bạn chưa nhập đủ từ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                frmFlappyBird_Load_3(sender, e);
                 lblBird.Focus();
             }
 
@@ -96,6 +106,7 @@ namespace WindowsFormsApplication1
             {
                 MessageBox.Show("Lỗi nhập từ khi chơi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 lblBird.Focus();
+                frmFlappyBird_Load_3(sender, e);
             }
 
             else
@@ -199,9 +210,11 @@ namespace WindowsFormsApplication1
         private void frmFlappyBird_Load_2(object sender, EventArgs e)
         {
             this.KeyPreview = true;
-
         }
-  
+        private void frmFlappyBird_Load_3(object sender, EventArgs e)
+        {
+            this.KeyPreview = false;
+        }
         private void GameOver()
         {
             MessageBox.Show("Bạn được số điểm là " + lblPoint.Text + " điểm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);

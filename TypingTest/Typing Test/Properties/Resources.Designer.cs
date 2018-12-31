@@ -183,16 +183,6 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FlappyBird {
-            get {
-                object obj = ResourceManager.GetObject("FlappyBird", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap FlappyBird1 {
             get {
                 object obj = ResourceManager.GetObject("FlappyBird1", resourceCulture);
@@ -456,16 +446,6 @@ namespace WindowsFormsApplication1.Properties {
         internal static System.Drawing.Bitmap Speed {
             get {
                 object obj = ResourceManager.GetObject("Speed", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Thác_nước {
-            get {
-                object obj = ResourceManager.GetObject("Thác nước", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

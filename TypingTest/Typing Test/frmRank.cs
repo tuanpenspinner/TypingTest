@@ -29,7 +29,8 @@ namespace WindowsFormsApplication1
         private void frmRank_Load(object sender, EventArgs e)
         {
             Db.Connection();
-            lblUseName.Text = Db.GetAcountUsing(Db.Connec);
+            string UseName = Db.GetAcountUsing(Db.Connec);          
+            lblUseName.Text = UseName;
             string sql = "SELECT UseName , " + strName + " FROM TbDataAccount ORDER BY " + strName + " DESC ";
         
             OleDbDataAdapter da = new OleDbDataAdapter(sql, Db.Connec);
@@ -42,7 +43,15 @@ namespace WindowsFormsApplication1
             {
                 dgvRank.Rows[i].Cells[0].Value = i + 1;
             }
-
+            int index = 0;
+            for (int i = 0; i < dgvRank.Rows.Count; i++)
+            {
+                if (dgvRank.Rows[i].Cells[1].Value.ToString() == UseName)
+                {
+                    index = i; break;
+                }
+            }
+            dgvRank.Rows[index].DefaultCellStyle.BackColor = Color.Yellow; dgvRank.Rows[0].Selected = false;
             Db.Connec.Close();
         }
     }

@@ -238,7 +238,6 @@
     <None Include="Resources\win.png" />
     <None Include="Resources\Thành Tích.png" />
     <None Include="Resources\Thac_Nước_Naruto.png" />
-    <None Include="Resources\Thác nước.jpg" />
     <None Include="Resources\Tonev-Windows-7-Windows-7-award.ico" />
     <None Include="Resources\Wwalczyszyn-Android-Style-Honeycomb-Books.ico" />
     <None Include="Resources\login.png" />
@@ -260,7 +259,6 @@
     <None Include="Resources\Pipe_flappybird.png" />
     <None Include="Resources\Pipe_flappybird-Trên.png" />
     <None Include="Resources\Pipe_flappybird1.png" />
-    <None Include="Resources\FlappyBird.png" />
     <None Include="Resources\FlappyBird1.png" />
     <None Include="Resources\BackGroundFlappyBird.jpg" />
     <None Include="Resources\award1.png" />
