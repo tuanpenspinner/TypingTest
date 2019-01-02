@@ -50,6 +50,7 @@
             this.cmbTestABC = new System.Windows.Forms.ComboBox();
             this.cmbGame = new System.Windows.Forms.ComboBox();
             this.lblLevel = new System.Windows.Forms.Label();
+            this.cmbTextPractice = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -311,12 +312,28 @@
             this.lblLevel.TabIndex = 17;
             this.lblLevel.Text = "Level:";
             // 
+            // cmbTextPractice
+            // 
+            this.cmbTextPractice.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cmbTextPractice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTextPractice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTextPractice.FormattingEnabled = true;
+            this.cmbTextPractice.Items.AddRange(new object[] {
+            "1 minute",
+            "5 minute",
+            "10 minute"});
+            this.cmbTextPractice.Location = new System.Drawing.Point(614, 205);
+            this.cmbTextPractice.Name = "cmbTextPractice";
+            this.cmbTextPractice.Size = new System.Drawing.Size(162, 33);
+            this.cmbTextPractice.TabIndex = 18;
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(1128, 547);
+            this.Controls.Add(this.cmbTextPractice);
             this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.cmbGame);
             this.Controls.Add(this.cmbTestABC);
@@ -367,5 +384,6 @@
         private System.Windows.Forms.ComboBox cmbTestABC;
         private System.Windows.Forms.ComboBox cmbGame;
         private System.Windows.Forms.Label lblLevel;
+        private System.Windows.Forms.ComboBox cmbTextPractice;
     }
 }

@@ -36,16 +36,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblUseName = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblMaxMinuteTestPractice = new System.Windows.Forms.Label();
+            this.lblFastestSpeedTestPractice = new System.Windows.Forms.Label();
             this.lblMaxPointFlappyBird = new System.Windows.Forms.Label();
             this.lblMaxPointCharFallOut = new System.Windows.Forms.Label();
             this.lblMaxMinuteTestABC = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblMaxPointEggDrop = new System.Windows.Forms.Label();
             this.lblMaxSecondTestABC = new System.Windows.Forms.Label();
-            this.lblMaxSecondTestPractice = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.lblMaxPointBlockDrop = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,6 +59,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -143,16 +142,16 @@
             this.label7.TabIndex = 24;
             this.label7.Text = "Max Score";
             // 
-            // lblMaxMinuteTestPractice
+            // lblFastestSpeedTestPractice
             // 
-            this.lblMaxMinuteTestPractice.AutoSize = true;
-            this.lblMaxMinuteTestPractice.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaxMinuteTestPractice.ForeColor = System.Drawing.Color.Purple;
-            this.lblMaxMinuteTestPractice.Location = new System.Drawing.Point(273, 313);
-            this.lblMaxMinuteTestPractice.Name = "lblMaxMinuteTestPractice";
-            this.lblMaxMinuteTestPractice.Size = new System.Drawing.Size(39, 29);
-            this.lblMaxMinuteTestPractice.TabIndex = 25;
-            this.lblMaxMinuteTestPractice.Text = "00";
+            this.lblFastestSpeedTestPractice.AutoSize = true;
+            this.lblFastestSpeedTestPractice.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFastestSpeedTestPractice.ForeColor = System.Drawing.Color.Purple;
+            this.lblFastestSpeedTestPractice.Location = new System.Drawing.Point(273, 313);
+            this.lblFastestSpeedTestPractice.Name = "lblFastestSpeedTestPractice";
+            this.lblFastestSpeedTestPractice.Size = new System.Drawing.Size(39, 29);
+            this.lblFastestSpeedTestPractice.TabIndex = 25;
+            this.lblFastestSpeedTestPractice.Text = "00";
             // 
             // lblMaxPointFlappyBird
             // 
@@ -220,17 +219,6 @@
             this.lblMaxSecondTestABC.TabIndex = 30;
             this.lblMaxSecondTestABC.Text = "00";
             // 
-            // lblMaxSecondTestPractice
-            // 
-            this.lblMaxSecondTestPractice.AutoSize = true;
-            this.lblMaxSecondTestPractice.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaxSecondTestPractice.ForeColor = System.Drawing.Color.Purple;
-            this.lblMaxSecondTestPractice.Location = new System.Drawing.Point(343, 313);
-            this.lblMaxSecondTestPractice.Name = "lblMaxSecondTestPractice";
-            this.lblMaxSecondTestPractice.Size = new System.Drawing.Size(39, 29);
-            this.lblMaxSecondTestPractice.TabIndex = 29;
-            this.lblMaxSecondTestPractice.Text = "00";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -241,17 +229,6 @@
             this.label9.Size = new System.Drawing.Size(20, 29);
             this.label9.TabIndex = 32;
             this.label9.Text = ":";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Purple;
-            this.label10.Location = new System.Drawing.Point(317, 313);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(20, 29);
-            this.label10.TabIndex = 31;
-            this.label10.Text = ":";
             // 
             // lblMaxPointBlockDrop
             // 
@@ -445,11 +422,23 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Purple;
+            this.label8.Location = new System.Drawing.Point(327, 313);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(181, 29);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "(word/minute)";
+            // 
             // frmScore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 588);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.btnRankBlockDrop);
             this.Controls.Add(this.btnRankEggDrop);
             this.Controls.Add(this.btnRankFlappyBird);
@@ -461,14 +450,12 @@
             this.Controls.Add(this.lblMaxPointBlockDrop);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.lblMaxSecondTestABC);
-            this.Controls.Add(this.lblMaxSecondTestPractice);
             this.Controls.Add(this.lblMaxMinuteTestABC);
             this.Controls.Add(this.lblMaxPointCharFallOut);
             this.Controls.Add(this.lblMaxPointEggDrop);
             this.Controls.Add(this.lblMaxPointFlappyBird);
-            this.Controls.Add(this.lblMaxMinuteTestPractice);
+            this.Controls.Add(this.lblFastestSpeedTestPractice);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblUseName);
             this.Controls.Add(this.label12);
@@ -512,16 +499,14 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblUseName;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblMaxMinuteTestPractice;
+        private System.Windows.Forms.Label lblFastestSpeedTestPractice;
         private System.Windows.Forms.Label lblMaxPointFlappyBird;
         private System.Windows.Forms.Label lblMaxPointCharFallOut;
         private System.Windows.Forms.Label lblMaxMinuteTestABC;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblMaxPointEggDrop;
         private System.Windows.Forms.Label lblMaxSecondTestABC;
-        private System.Windows.Forms.Label lblMaxSecondTestPractice;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblMaxPointBlockDrop;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label6;
@@ -532,5 +517,6 @@
         private System.Windows.Forms.Button btnRankFlappyBird;
         private System.Windows.Forms.Button btnRankEggDrop;
         private System.Windows.Forms.Button btnRankBlockDrop;
+        private System.Windows.Forms.Label label8;
     }
 }

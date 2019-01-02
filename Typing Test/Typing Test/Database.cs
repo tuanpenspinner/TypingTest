@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1
 
         public void Connection()
         {
-            string StringConnection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\#Dai_K-Du\Desktop\TypingTest\TypingTest\DataAccount.mdb";
+            string StringConnection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\#Dai_K-Du\Desktop\TypingTest\Typing Test\DataAccount.mdb";
             Connec = new OleDbConnection(StringConnection);
             if (Connec.State != ConnectionState.Open)
             {
@@ -154,6 +154,30 @@ namespace WindowsFormsApplication1
         public void SaveMaxSpeedTestABC(OleDbConnection Connec, string UseName, int PointMax)
         {
             string sql = "UPDATE TbDataAccount SET PointTestABC= '" + PointMax + "' WHERE UseName='" + UseName + "'";
+            OleDbCommand cmd = new OleDbCommand(sql, Connec);
+            cmd.ExecuteNonQuery();
+        }
+
+        public int MaxScoreTypingTest(OleDbConnection Connec, string UseName)
+        {
+            string maxscore = "";
+            int max = 0;
+
+            string sql = "SELECT* FROM TbDataAccount WHERE UseName='" + UseName + "'";
+
+            OleDbCommand cmd = new OleDbCommand(sql, Connec);
+            OleDbDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                maxscore = dr["PointTypingTest"].ToString();
+                max = Convert.ToInt32(maxscore);
+            }
+            return max;
+        }
+
+        public void SaveMaxSpeedTypingTest(OleDbConnection Connec, string UseName, int PointMax)
+        {
+            string sql = "UPDATE TbDataAccount SET PointTypingTest= '" + PointMax + "' WHERE UseName='" + UseName + "'";
             OleDbCommand cmd = new OleDbCommand(sql, Connec);
             cmd.ExecuteNonQuery();
         }

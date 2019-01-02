@@ -31,8 +31,16 @@ namespace WindowsFormsApplication1
             Db.Connection();
             string UseName = Db.GetAcountUsing(Db.Connec);          
             lblUseName.Text = UseName;
-            string sql = "SELECT UseName , " + strName + " FROM TbDataAccount ORDER BY " + strName + " DESC ";
-        
+            string sql;
+            if (strName == "PointTestABC")
+            {
+                sql = "SELECT UseName , " + strName + " FROM TbDataAccount ORDER BY " + strName + " ASC ";
+            }
+            else
+            {
+                sql = "SELECT UseName , " + strName + " FROM TbDataAccount ORDER BY " + strName + " DESC ";
+            }
+
             OleDbDataAdapter da = new OleDbDataAdapter(sql, Db.Connec);
             DataTable dt = new DataTable();
             da.Fill(dt);

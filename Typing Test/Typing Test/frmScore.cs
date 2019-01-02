@@ -73,6 +73,16 @@ namespace WindowsFormsApplication1
                 lblMaxPointBlockDrop.Text = "0" + Db.MaxScoreBlockDrop(Db.Connec, UseName).ToString();
             }
 
+            if (Db.MaxScoreTypingTest(Db.Connec, UseName) >= 10)
+            {
+                lblFastestSpeedTestPractice.Text = Db.MaxScoreTypingTest(Db.Connec, UseName).ToString();
+            }
+
+            else
+            {
+                lblFastestSpeedTestPractice.Text = "0" + Db.MaxScoreTypingTest(Db.Connec, UseName).ToString();
+            }
+
             int MaxSpeed = Db.MaxScoreSpeedTestABC(Db.Connec, UseName);
             if (MaxSpeed >= 60)
             {

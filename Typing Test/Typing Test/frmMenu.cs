@@ -29,14 +29,20 @@ namespace WindowsFormsApplication1
             }
             btnTextPractice.Visible = false;
             cmbTestABC.Visible = true;
+            cmbTextPractice.Visible = false;
         }
 
         private void btnTextPractice_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            frmTypingTest frm = new frmTypingTest();
-            frm.ShowDialog();
-
+            cmbTextPractice.Visible = true;
+           
+            if(cmbTextPractice.Text!="")
+            {
+                this.Dispose();
+                frmTypingTest frm = new frmTypingTest();
+                frm.strTime = cmbTextPractice.SelectedItem.ToString();
+                frm.ShowDialog();
+            }
         }
 
         private void btnFlappyBird_Click(object sender, EventArgs e)
@@ -77,6 +83,7 @@ namespace WindowsFormsApplication1
             btnTextPractice.Visible = false;
             btnBlockDrop.Visible = false;
             cmbTestABC.Visible = false;
+            cmbTextPractice.Visible = false;
         }
 
         private void btnSpeedTest_Click(object sender, EventArgs e)
@@ -84,6 +91,7 @@ namespace WindowsFormsApplication1
             cmbTestABC.Visible = false;
             btnTestABC.Visible = true;
             btnTextPractice.Visible = true;
+            cmbTextPractice.Visible = false;
 
             lblLevel.Visible = false;
             cmbGame.Visible = false;
@@ -99,6 +107,7 @@ namespace WindowsFormsApplication1
             cmbTestABC.Visible = false;
             btnTestABC.Visible = false;
             btnTextPractice.Visible = false;
+            cmbTextPractice.Visible = false;
 
             lblLevel.Visible = true;
             cmbGame.Visible = true;
@@ -145,6 +154,7 @@ namespace WindowsFormsApplication1
             }
            
         }
+
     }
 
 }
