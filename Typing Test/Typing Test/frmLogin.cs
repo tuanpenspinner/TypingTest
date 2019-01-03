@@ -37,7 +37,7 @@ namespace WindowsFormsApplication1
 
             Db.Connection();
             
-            string SQL = "SELECT UseName,PassWord FROM TbDataAccount WHERE UseName='" + txtUsename.Text + "' AND '" + txtPassword.Text + "'";
+            string SQL = "SELECT UseName FROM TbDataAccount WHERE UseName='" + txtUsename.Text + "' AND PassWord= '" + txtPassword.Text + "'";
             string SQLRemmemberPassWord = "INSERT INTO TbRemmemberPassWord VALUES('" + txtUsename.Text + "' ,'" + txtPassword.Text + "')";
             string SQLUser = "INSERT INTO TbUser VALUES('" + txtUsename.Text + "' ,'" + txtPassword.Text + "')";
             string SQLREMOVEALL = "DELETE FROM TbRemmemberPassWord";
@@ -46,7 +46,8 @@ namespace WindowsFormsApplication1
             OleDbCommand Cmd1 = new OleDbCommand(SQLRemmemberPassWord, Db.Connec);
             OleDbCommand Cmd2 = new OleDbCommand(SQLREMOVEALL, Db.Connec);
             OleDbDataReader ReadDb = Cmd.ExecuteReader();
-            if(ReadDb.Read())
+
+            if (ReadDb.Read())
             {
                 Cmd2.ExecuteNonQuery();
                 if (chkRememberPass.Checked)

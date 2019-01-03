@@ -172,7 +172,7 @@ namespace WindowsFormsApplication1
 
         private void timer_Tick(object sender, EventArgs e)
         {
-
+            timer.Interval = 100;
             if (strLevel=="Easy")
             {
                 Level = 1;

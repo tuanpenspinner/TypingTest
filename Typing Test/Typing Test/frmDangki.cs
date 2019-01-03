@@ -31,8 +31,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                lblPassWordNull.Visible = false;
-              
+                lblPassWordNull.Visible = false;  
             }
 
             if (txtUsename.Text == "")

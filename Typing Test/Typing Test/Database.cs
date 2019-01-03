@@ -22,7 +22,6 @@ namespace WindowsFormsApplication1
             }
 
         }
-
         public string GetAcountUsing(OleDbConnection Connec)
         {
             string UseName = "";
@@ -36,7 +35,7 @@ namespace WindowsFormsApplication1
             }
             return UseName;
         }
-
+                
         public int MaxScoreCharFallOut(OleDbConnection Connec, string UseName)
         {
             string maxscore = "";
@@ -190,6 +189,24 @@ namespace WindowsFormsApplication1
             OleDbCommand cmd = new OleDbCommand(sql, Connec);
             cmd.ExecuteNonQuery();
         }
+
+        public string Introduce(OleDbConnection Connec, int ID)
+        {
+            //Connec.Open();
+            string Introduce="";
+            string sql="SELECT * FROM TbHuongDan WHERE ID = "+ ID;
+
+            OleDbCommand cmd = new OleDbCommand(sql, Connec);
+            OleDbDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                Introduce = dr["Introduce"].ToString();
+            }
+            //Connec.Close();
+            return Introduce;
+       
+        }
+        
     }
 }
 

@@ -31,17 +31,18 @@ namespace WindowsFormsApplication1
 
         private void frmFlappyBird_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-            char[] c = lblBird.Text.ToCharArray();
-            if (e.KeyChar == c[0])
+          
+            //char[] c = lblBird.Text.ToCharArray();
+            char c = lblBird.Text[0];
+            if (e.KeyChar == c)
             {
                 yBird -= 30;
                 lblBird.Location = new Point(400, yBird);
-                char[] c1 = txtTu.Text.ToCharArray();
-                char[] c2 = txtDen.Text.ToCharArray();
+                char c1 = txtTu.Text[0];
+                char c2 = txtDen.Text[0];
                 Random rd = new Random();
-                int a = Convert.ToInt32(c1[0]);
-                int b = Convert.ToInt32(c2[0]);
+                int a = Convert.ToInt32(c1);
+                int b = Convert.ToInt32(c2);
                 lblBird.Text = Convert.ToString((char)rd.Next(a, b+1));
             }
         }
@@ -243,7 +244,7 @@ namespace WindowsFormsApplication1
             lblCotTren3.Location = new Point(xCot3, yCotTren3);
             lblCotDuoi3.Location = new Point(xCot3, yCotDuoi3);
 
-            if (xCot1 <= 0 - lblCotTren1.Width)
+            if (xCot1 <=  - lblCotTren1.Width)
             {
                 Random rd1 = new Random();
                 yCotTren1 = rd1.Next(-lblCotTren1.Height+40, 0);

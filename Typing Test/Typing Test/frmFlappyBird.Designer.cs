@@ -62,7 +62,7 @@
             this.lblBird.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBird.ForeColor = System.Drawing.Color.Red;
             this.lblBird.Image = global::WindowsFormsApplication1.Properties.Resources.FlappyBird1;
-            this.lblBird.Location = new System.Drawing.Point(366, 188);
+            this.lblBird.Location = new System.Drawing.Point(403, 172);
             this.lblBird.Name = "lblBird";
             this.lblBird.Size = new System.Drawing.Size(83, 70);
             this.lblBird.TabIndex = 0;

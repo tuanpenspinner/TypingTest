@@ -81,6 +81,8 @@ namespace WindowsFormsApplication1
                     lblMaxSencond.Text = MaxSpeed + "0";
                 }
             }
+
+            Db.Connec.Close();
         }
 
         private void ChangeColorLabel()

@@ -43,6 +43,9 @@
             this.btnChoiLai = new System.Windows.Forms.Button();
             this.lblSecond = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnSelect = new System.Windows.Forms.Button();
+            this.cmdTypingTest = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TimerStart
@@ -149,7 +152,7 @@
             this.btnStart.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.ForeColor = System.Drawing.Color.Red;
             this.btnStart.Image = global::WindowsFormsApplication1.Properties.Resources.Play;
-            this.btnStart.Location = new System.Drawing.Point(12, 102);
+            this.btnStart.Location = new System.Drawing.Point(9, 232);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(162, 78);
             this.btnStart.TabIndex = 35;
@@ -208,11 +211,47 @@
             this.label2.TabIndex = 32;
             this.label2.Text = ":";
             // 
+            // btnSelect
+            // 
+            this.btnSelect.AutoSize = true;
+            this.btnSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelect.Location = new System.Drawing.Point(9, 53);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(95, 35);
+            this.btnSelect.TabIndex = 41;
+            this.btnSelect.Text = "Chọn";
+            this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
+            // cmdTypingTest
+            // 
+            this.cmdTypingTest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmdTypingTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdTypingTest.FormattingEnabled = true;
+            this.cmdTypingTest.Location = new System.Drawing.Point(118, 53);
+            this.cmdTypingTest.Name = "cmdTypingTest";
+            this.cmdTypingTest.Size = new System.Drawing.Size(262, 33);
+            this.cmdTypingTest.TabIndex = 42;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(113, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(267, 25);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "Danh sách bài luyện tập";
+            // 
             // frmTypingTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1162, 434);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cmdTypingTest);
+            this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblFastestSpeed);
             this.Controls.Add(this.label3);
@@ -253,5 +292,8 @@
         private System.Windows.Forms.Button btnChoiLai;
         private System.Windows.Forms.Label lblSecond;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.ComboBox cmdTypingTest;
+        private System.Windows.Forms.Label label4;
     }
 }

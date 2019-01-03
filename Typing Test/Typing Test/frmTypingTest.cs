@@ -46,7 +46,9 @@ namespace WindowsFormsApplication1
 
         private void frmTypingTest_Load(object sender, EventArgs e)
         {
-            if(strTime== "1 minute")
+            Db.Connection();
+
+            if (strTime == "1 minute")
             {
                 minute = 1;
                 second = 0;
@@ -62,15 +64,14 @@ namespace WindowsFormsApplication1
                 minute = 10;
                 second = 0;
             }
-            if(minute>=10)
+            if (minute >= 10)
             {
                 lblMinute.Text = minute + "";
             }
             else
             {
-                lblMinute.Text = "0"+minute;
+                lblMinute.Text = "0" + minute;
             }
-            
 
             Db.Connection();
             UseName = Db.GetAcountUsing(Db.Connec);
@@ -90,17 +91,18 @@ namespace WindowsFormsApplication1
             txtTypingTest.Focus();
             txtTypingTest.Clear();
             txtTypingTest.Enabled = false;
-            Db.Connection();
             btnChoiLai.Visible = false;
-            string SQL = "SELECT * FROM TbTypingTest WHERE NameSong='Thằng điên'";
+
+            string SQL = "SELECT NameSong FROM TbTypingTest";
             OleDbCommand cmd = new OleDbCommand(SQL, Db.Connec);
-            OleDbDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                strFather = dr["Lyrics"].ToString();
-            }
-            strSon = strFather.Split('\n');
-            lblTypingTest.Text = strSon[number];
+            OleDbDataAdapter da = new OleDbDataAdapter(SQL, Db.Connec);
+            DataSet ds = new DataSet();
+          
+            da.Fill(ds);
+            cmd.ExecuteNonQuery();
+            cmdTypingTest.DisplayMember = ds.Tables[0].Columns[0].ToString();
+            cmdTypingTest.DataSource = ds.Tables[0];
+            
             Db.Connec.Close();
         }
 
@@ -108,25 +110,57 @@ namespace WindowsFormsApplication1
         {
             Db.Connection();
             FastestSpeed = Db.MaxScoreTypingTest(Db.Connec, UseName);
-            if(FastestSpeed>=10)
+            if (FastestSpeed >= 10)
             {
                 lblFastestSpeed.Text = FastestSpeed + "";
             }
             else
             {
-                lblFastestSpeed.Text = "0"+FastestSpeed;
+                lblFastestSpeed.Text = "0" + FastestSpeed;
             }
-            
+
             txtTypingTest.Enabled = false;
             txtTypingTest.Clear();
             lblTypingTest.Text = strSon[0];
             btnStart.Visible = false;
             btnChoiLai.Visible = true;
             number = 0;
-            second = 60;
             Word_Right = 0;
-            lblMinute.Text = "01";
-            lblSecond.Text = "00";
+            if (strTime == "1 minute")
+            {
+                minute = 1;
+                second = 0;
+            }
+            if (strTime == "5 minute")
+            {
+                minute = 5;
+                second = 0;
+            }
+
+            if (strTime == "10 minute")
+            {
+                minute = 10;
+                second = 0;
+            }
+            if (minute >= 10)
+            {
+                lblMinute.Text = minute + "";
+            }
+            else
+            {
+                lblMinute.Text = "0" + minute;
+            }
+
+            if (second >= 10)
+            {
+                lblSecond.Text = second + "";
+            }
+            else
+            {
+                lblSecond.Text = "0" + second;
+            }
+
+
             Db.Connec.Close();
         }
 
@@ -157,14 +191,25 @@ namespace WindowsFormsApplication1
         private void GameOver(object sender, EventArgs e)
         {
             frmTypingTest_Load_Text(sender, e);
-            TimerStart.Stop();
             Db.Connection();
+ 
+            if (strTime == "5 minute")
+            {
+                Word_Right /= 5;
+                Word_Right++;
+            }
+
+            if (strTime == "10 minute")
+            {
+                Word_Right /= 10;
+                Word_Right++;
+            }
             if (FastestSpeed < Word_Right)
             {
                 Db.SaveMaxSpeedTypingTest(Db.Connec, UseName, Word_Right);
             }
             btnChoiLai.Visible = true;
-            MessageBox.Show("Bạn đã đúng số từ là " + Word_Right,
+            MessageBox.Show("Tốc độ gõ của bạn là " + Word_Right +" từ trên 1 phút " ,
                 "Thông báo",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
@@ -200,14 +245,38 @@ namespace WindowsFormsApplication1
         private void TimerStart_Tick(object sender, EventArgs e)
         {
             TimerStart.Interval = 100;
-            lblMinute.Text = "00";
-            second--;
-            lblSecond.Text = "" + second;
 
-            if (second == 0)
+            if (second == 0 && minute >= 1)
             {
-                GameOver(sender, e);
+                minute--;
+                second = 60;
+
             }
+            if(second==0&&minute==0)
+            {
+                TimerStart.Stop();
+                GameOver(sender, e);
+                return;
+            }
+            second--;
+            if(minute>=10)
+            {
+                lblMinute.Text = "" + minute;
+            }
+            else
+            {
+                lblMinute.Text = "0" + minute;
+            }
+           
+            if(second>=10)
+            {
+                lblSecond.Text = "" + second;
+            }
+            else
+            {
+                lblSecond.Text = "0" + second;
+            }
+            
         }
 
         private void frmTypingTest_KeyUp(object sender, KeyEventArgs e)
@@ -216,6 +285,23 @@ namespace WindowsFormsApplication1
             {
                 frmTypingTest_Load_Label(sender, e);
             }
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            Db.Connection();
+            string SQL = "SELECT * FROM TbTypingTest WHERE NameSong= '" + cmdTypingTest.Text + "' ";
+            OleDbCommand cmd = new OleDbCommand(SQL, Db.Connec);
+            OleDbDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                strFather = dr["Lyrics"].ToString();
+            }
+            strSon = strFather.Split('\n');
+            lblTypingTest.Text = strSon[number];
+
+            Db.Connec.Close();
+           
         }
     }
 }

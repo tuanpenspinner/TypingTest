@@ -79,6 +79,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.cs" />
+    <Compile Include="frmIntroduce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIntroduce.Designer.cs">
+      <DependentUpon>frmIntroduce.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBlockDrop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     <Compile Include="frmScore.Designer.cs">
       <DependentUpon>frmScore.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmIntroduce.resx">
+      <DependentUpon>frmIntroduce.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBlockDrop.resx">
       <DependentUpon>frmBlockDrop.cs</DependentUpon>
     </EmbeddedResource>

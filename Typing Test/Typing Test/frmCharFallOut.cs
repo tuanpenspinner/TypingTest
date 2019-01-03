@@ -12,10 +12,10 @@ namespace WindowsFormsApplication1
 {
     public partial class frmCharFallOut : Form
     {
-        int dem = 0;
-        int Level= 1;
-        int max;
-        int maxPoint;
+        int dem = 0;//Điểm của trò chơi
+        int Level= 1;//
+        int max;//Tọa độ y đáy
+        int maxPoint;//Điểm cao nhất của người chơi
         string UseName;
         Random rd = new Random();
         Database Db = new Database();
@@ -90,7 +90,7 @@ namespace WindowsFormsApplication1
 
         private void btnChoi_Click(object sender, EventArgs e)
         {
-            max = panel.Height - lblChar.Height;
+            
             btnChoi.Visible = false;
             textBox1.Focus();
             lblChar.Text = Convert.ToString((char)rd.Next(65, 122));
@@ -135,6 +135,7 @@ namespace WindowsFormsApplication1
 
         private void frmTextFallOut_Load(object sender, EventArgs e)
         {
+            max = panel.Height - lblChar.Height;
             Database Db = new Database();
             Db.Connection();
             lblUseName.Text = Db.GetAcountUsing(Db.Connec);
@@ -149,8 +150,6 @@ namespace WindowsFormsApplication1
             frmMenu frm = new frmMenu();
             frm.ShowDialog();
         }
-
-    
 
     }
 }

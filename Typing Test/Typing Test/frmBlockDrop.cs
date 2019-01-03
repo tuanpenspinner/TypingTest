@@ -78,13 +78,14 @@ namespace WindowsFormsApplication1
             lblMain.Visible = false;
             btnChoi.Visible = true;
             btnChoiLai.Visible = false;
+            Db.Connec.Close();
         }
 
         private void frmBlockDrop_Load1(object sender, EventArgs e)
         {
+            lblPoint.Text = "00";
             Db.Connection();
-            UseName = Db.GetAcountUsing(Db.Connec);
-            lblUseName.Text = UseName;
+
             MaxPoint = Db.MaxScoreBlockDrop(Db.Connec, UseName);
             if (MaxPoint >= 10)
             {
@@ -106,6 +107,8 @@ namespace WindowsFormsApplication1
             lblMain.Visible = false;
             btnChoi.Visible = false;
             btnChoiLai.Visible = true;
+
+            Db.Connec.Close();
         }
 
         private void frmBlockDrop_Load_KePreviewTrue(object sender, EventArgs e)
@@ -273,7 +276,9 @@ namespace WindowsFormsApplication1
 
             if (Point > MaxPoint)
             {
+                Db.Connection();
                 Db.SaveMaxBlockDrop(Db.Connec, UseName, Point);
+                Db.Connec.Close();
             }
             Point = 0;
             Dem = 1;

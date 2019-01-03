@@ -35,6 +35,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblUseName = new System.Windows.Forms.Label();
+            this.cmbTestABC = new System.Windows.Forms.ComboBox();
+            this.cmbGame = new System.Windows.Forms.ComboBox();
+            this.lblLevel = new System.Windows.Forms.Label();
             this.btnBlockDrop = new System.Windows.Forms.Button();
             this.btnEggDrop = new System.Windows.Forms.Button();
             this.btnScore = new System.Windows.Forms.Button();
@@ -47,9 +50,6 @@
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnTyPingGame = new System.Windows.Forms.Button();
             this.btnSpeedTest = new System.Windows.Forms.Button();
-            this.cmbTestABC = new System.Windows.Forms.ComboBox();
-            this.cmbGame = new System.Windows.Forms.ComboBox();
-            this.lblLevel = new System.Windows.Forms.Label();
             this.cmbTextPractice = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -88,6 +88,47 @@
             this.lblUseName.Size = new System.Drawing.Size(271, 36);
             this.lblUseName.TabIndex = 13;
             this.lblUseName.Text = "TuanPenSpinner";
+            // 
+            // cmbTestABC
+            // 
+            this.cmbTestABC.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cmbTestABC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTestABC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTestABC.FormattingEnabled = true;
+            this.cmbTestABC.Items.AddRange(new object[] {
+            "A->Z",
+            "0->9",
+            "Random(~!@#$)"});
+            this.cmbTestABC.Location = new System.Drawing.Point(527, 129);
+            this.cmbTestABC.Name = "cmbTestABC";
+            this.cmbTestABC.Size = new System.Drawing.Size(162, 33);
+            this.cmbTestABC.TabIndex = 15;
+            // 
+            // cmbGame
+            // 
+            this.cmbGame.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cmbGame.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbGame.FormattingEnabled = true;
+            this.cmbGame.Items.AddRange(new object[] {
+            "Easy",
+            "Medium",
+            "Hard"});
+            this.cmbGame.Location = new System.Drawing.Point(879, 302);
+            this.cmbGame.Name = "cmbGame";
+            this.cmbGame.Size = new System.Drawing.Size(145, 33);
+            this.cmbGame.TabIndex = 16;
+            // 
+            // lblLevel
+            // 
+            this.lblLevel.AutoSize = true;
+            this.lblLevel.Font = new System.Drawing.Font("Modern No. 20", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLevel.ForeColor = System.Drawing.Color.Blue;
+            this.lblLevel.Location = new System.Drawing.Point(767, 304);
+            this.lblLevel.Name = "lblLevel";
+            this.lblLevel.Size = new System.Drawing.Size(92, 31);
+            this.lblLevel.TabIndex = 17;
+            this.lblLevel.Text = "Level:";
             // 
             // btnBlockDrop
             // 
@@ -270,47 +311,6 @@
             this.btnSpeedTest.Text = "Speed Test";
             this.btnSpeedTest.UseVisualStyleBackColor = false;
             this.btnSpeedTest.Click += new System.EventHandler(this.btnSpeedTest_Click);
-            // 
-            // cmbTestABC
-            // 
-            this.cmbTestABC.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cmbTestABC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTestABC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTestABC.FormattingEnabled = true;
-            this.cmbTestABC.Items.AddRange(new object[] {
-            "A->Z",
-            "0->9",
-            "Random(~!@#$)"});
-            this.cmbTestABC.Location = new System.Drawing.Point(527, 129);
-            this.cmbTestABC.Name = "cmbTestABC";
-            this.cmbTestABC.Size = new System.Drawing.Size(162, 33);
-            this.cmbTestABC.TabIndex = 15;
-            // 
-            // cmbGame
-            // 
-            this.cmbGame.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cmbGame.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbGame.FormattingEnabled = true;
-            this.cmbGame.Items.AddRange(new object[] {
-            "Easy",
-            "Medium",
-            "Hard"});
-            this.cmbGame.Location = new System.Drawing.Point(879, 302);
-            this.cmbGame.Name = "cmbGame";
-            this.cmbGame.Size = new System.Drawing.Size(145, 33);
-            this.cmbGame.TabIndex = 16;
-            // 
-            // lblLevel
-            // 
-            this.lblLevel.AutoSize = true;
-            this.lblLevel.Font = new System.Drawing.Font("Modern No. 20", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLevel.ForeColor = System.Drawing.Color.Blue;
-            this.lblLevel.Location = new System.Drawing.Point(767, 304);
-            this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(92, 31);
-            this.lblLevel.TabIndex = 17;
-            this.lblLevel.Text = "Level:";
             // 
             // cmbTextPractice
             // 
