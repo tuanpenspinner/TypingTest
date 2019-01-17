@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Data;
+using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
@@ -14,7 +15,8 @@ namespace WindowsFormsApplication1
 
         public void Connection()
         {
-            string StringConnection = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\#Dai_K-Du\Desktop\TypingTest\Typing Test\DataAccount.mdb";
+            string appPath = Application.StartupPath;
+            string StringConnection = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = "+appPath +"\\DataAccount.mdb";
             Connec = new OleDbConnection(StringConnection);
             if (Connec.State != ConnectionState.Open)
             {

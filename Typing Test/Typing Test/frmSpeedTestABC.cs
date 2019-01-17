@@ -634,6 +634,7 @@ namespace WindowsFormsApplication1
         private void GameOver()
         {
             Speed = seconds + minutes * 60;
+            Db.Connection();
             if(Speed<MaxSpeed||MaxSpeed==0)
             {
                 Db.SaveMaxSpeedTestABC(Db.Connec, UseName, Speed);
